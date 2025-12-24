@@ -1,0 +1,663 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;800&family=Yomogi&display=swap');
+
+:root {
+    /* Pop Colors */
+    --primary-color: #ff5299;
+    /* Hot Pink */
+    --secondary-color: #ff9f1c;
+    /* Vibrant Orange */
+    --accent-color: #2cbdff;
+    /* Cyan Blue */
+    --bg-color: #fffef8;
+    /* Creamy White */
+    --text-color: #4a4a4a;
+    --text-light: #fff;
+
+    /* Paper & Shadow */
+    --paper-shadow: 2px 3px 10px rgba(0, 0, 0, 0.1);
+    --tape-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    --border-radius: 12px;
+
+    --font-heading: 'M PLUS Rounded 1c', sans-serif;
+    --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --font-hand: 'Yomogi', cursive;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-color);
+    /* Polka dot pattern background */
+    background-image: radial-gradient(var(--secondary-color) 1px, transparent 1px), radial-gradient(var(--primary-color) 1px, transparent 1px);
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+    /* For tilted elements */
+}
+
+/* Utilities */
+.container {
+    padding: 0 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+a {
+    transition: opacity 0.2s;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+.section {
+    padding: 60px 0;
+    position: relative;
+    /* Zigzag border bottom using CSS gradients */
+    background:
+        linear-gradient(135deg, transparent 10px, rgba(255, 255, 255, 0.8) 0) top left,
+        linear-gradient(225deg, transparent 10px, rgba(255, 255, 255, 0.8) 0) top right,
+        linear-gradient(315deg, transparent 10px, rgba(255, 255, 255, 0.8) 0) bottom right,
+        linear-gradient(45deg, transparent 10px, rgba(255, 255, 255, 0.8) 0) bottom left;
+    background-size: 50% 50%;
+    background-repeat: repeat-x;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--font-heading);
+    letter-spacing: 0.05em;
+}
+
+.highlight-text {
+    color: var(--primary-color);
+    font-size: 1.2em;
+    text-shadow: 2px 2px 0 #fff, 4px 4px 0 var(--accent-color);
+}
+
+.handwriting {
+    font-family: var(--font-hand);
+    transform: rotate(-2deg);
+    color: var(--text-color);
+}
+
+/* --- Hero Section / Magazine Cover --- */
+.hero-section {
+    background: linear-gradient(180deg, rgba(255, 240, 100, 0.3) 0%, rgba(255, 255, 255, 0) 100%),
+        url('https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=800&q=80');
+    /* Tokyo/City vibe fallback */
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0 60px;
+    text-align: center;
+    position: relative;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Overlay to make text pop */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.cover-badge {
+    display: inline-block;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 5px 15px;
+    font-weight: 800;
+    transform: rotate(-5deg);
+    box-shadow: var(--shadow);
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    border: 2px solid #fff;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.hero-section .subtitle {
+    font-family: var(--font-hand);
+    font-size: 1.5rem;
+    color: #fff;
+    background: var(--secondary-color);
+    display: inline-block;
+    padding: 5px 20px;
+    transform: rotate(2deg);
+    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.trip-summary {
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    display: inline-block;
+    text-align: left;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transform: rotate(-1deg);
+    max-width: 90%;
+    text-shadow: none;
+}
+
+.emergency-contact-header {
+    margin-top: 20px;
+    background: #333;
+    color: #fff;
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    text-shadow: none;
+}
+
+/* --- Sticky Nav --- */
+.sticky-nav {
+    position: sticky;
+    top: 10px;
+    z-index: 100;
+    margin: 0 10px;
+}
+
+.sticky-nav ul {
+    background: #fff;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    border-radius: 50px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 3px solid var(--accent-color);
+}
+
+.sticky-nav a {
+    color: var(--text-color);
+    font-weight: 800;
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.sticky-nav a:hover {
+    color: var(--primary-color);
+}
+
+/* --- Tape Heading Effect --- */
+.tape-heading {
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--text-color);
+    background: rgba(255, 255, 255, 0.9);
+    display: inline-block;
+    padding: 10px 40px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%) rotate(-2deg);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    border-left: none;
+    /* Reset old style */
+}
+
+/* CSS Tape Strips using pseudo elements */
+.tape-heading::before,
+.tape-heading::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.4);
+    top: -30px;
+    border-left: 1px dashed rgba(0, 0, 0, 0.1);
+    border-right: 1px dashed rgba(0, 0, 0, 0.1);
+}
+
+.tape-heading::before {
+    left: -15px;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.5) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0.5) 75%, transparent 75%, transparent);
+    background-color: var(--primary-color);
+    background-size: 10px 10px;
+    transform: rotate(-45deg);
+    opacity: 0.6;
+    height: 30px;
+    width: 80px;
+    top: 50%;
+    margin-top: -15px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    -webkit-mask-image: linear-gradient(90deg, transparent 5%, black 5%, black 95%, transparent 95%);
+}
+
+.tape-heading::after {
+    right: -15px;
+    background: linear-gradient(-45deg, rgba(255, 255, 255, 0.5) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0.5) 75%, transparent 75%, transparent);
+    background-color: var(--accent-color);
+    background-size: 10px 10px;
+    transform: rotate(45deg);
+    opacity: 0.6;
+    height: 30px;
+    width: 80px;
+    top: 50%;
+    margin-top: -15px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Magazine Card --- */
+.magazine-card {
+    background: #fff;
+    padding: 20px;
+    position: relative;
+    border: 1px solid #eee;
+    box-shadow: var(--paper-shadow);
+    transition: transform 0.2s;
+    margin-bottom: 20px;
+}
+
+.magazine-card {
+    border: 5px solid #fff;
+    outline: 1px solid #ddd;
+}
+
+.magazine-card:hover {
+    transform: scale(1.02) rotate(0deg) !important;
+    z-index: 10;
+}
+
+.rotate-left {
+    transform: rotate(-2deg);
+}
+
+.rotate-right {
+    transform: rotate(2deg);
+}
+
+.day-badge {
+    position: absolute;
+    top: -15px;
+    left: -10px;
+    background: var(--secondary-color);
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-family: var(--font-heading);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    border: 2px solid #fff;
+}
+
+.day-card h3 {
+    margin-top: 15px;
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    border-bottom: 2px dashed #ddd;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.main-event {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.detail-link {
+    display: inline-block;
+    margin-top: 10px;
+    background: var(--accent-color);
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* --- Magazine Paper Detail Section --- */
+.magazine-paper {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 5px 5px 0 var(--accent-color);
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.magazine-paper::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 0;
+    bottom: 0;
+    border-left: 2px dotted #ccc;
+    width: 1px;
+}
+
+.day-header {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 10px 20px;
+    display: inline-block;
+    transform: rotate(-1deg);
+    margin-left: -30px;
+    /* Stick out */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.day-header small {
+    font-size: 0.8em;
+    font-weight: normal;
+    margin-left: 10px;
+}
+
+/* Timeline Updates */
+.timeline {
+    border-left: 3px solid #eee;
+}
+
+.event {
+    margin-bottom: 30px;
+}
+
+.event::before {
+    width: 14px;
+    height: 14px;
+    left: -28px;
+    /* Adjusted */
+    top: 8px;
+    border: 3px solid #fff;
+    box-shadow: 0 0 0 1px #ddd;
+}
+
+.event .time {
+    background: #eee;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    display: inline-block;
+}
+
+.event h4 {
+    font-size: 1.2rem;
+    margin: 5px 0;
+}
+
+/* Pop Badges & Memo */
+.pop-badge {
+    display: inline-block;
+    background: #ffec00;
+    color: #333;
+    font-size: 0.7rem;
+    font-weight: 900;
+    padding: 2px 6px;
+    transform: rotate(-5deg);
+    border: 1px solid #333;
+    position: absolute;
+    top: -10px;
+    right: 0;
+    z-index: 10;
+}
+
+.pop-memo {
+    font-family: var(--font-hand);
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    background: rgba(255, 255, 0, 0.1);
+    transform: rotate(1deg);
+    display: inline-block;
+    padding: 0 5px;
+}
+
+/* --- Info Cards --- */
+.flight-info {
+    border: 2px dashed #ddd;
+    padding: 15px;
+    margin: 10px 0;
+    background: #fdfdfd;
+}
+
+.highlight-box {
+    background: #ffffcc;
+    padding: 5px;
+    border-bottom: 1px solid #ffeebb;
+}
+
+/* --- List Items --- */
+.magazine-list li {
+    background: #fff;
+    border-bottom: 1px dotted #ccc;
+    padding: 15px 0;
+    display: flex;
+    align-items: flex-start;
+}
+
+.list-badge {
+    background: var(--text-color);
+    color: #fff;
+    font-size: 0.7rem;
+    padding: 2px 5px;
+    margin-right: 15px;
+    min-width: 70px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+/* --- Content Box --- */
+.content-box {
+    padding: 10px;
+}
+
+/* --- Checklist Handwritings --- */
+.checklist {
+    background: #fff9c4;
+    /* Yellow paper */
+    border: none;
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+    transform: rotate(1deg);
+}
+
+.check-items li {
+    font-family: var(--font-hand);
+    font-size: 1.1rem;
+    padding-left: 25px;
+}
+
+.check-items li::before {
+    content: '□';
+    /* Checkbox */
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+footer {
+    background: var(--primary-color);
+    margin-top: 40px;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* --- Useful Menu Buttons (Hero) --- */
+.useful-menu-grid {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.menu-btn {
+    background: #fff;
+    color: var(--primary-color);
+    padding: 10px 15px;
+    border-radius: 30px;
+    font-weight: 800;
+    text-decoration: none;
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.1);
+    border: 2px solid var(--primary-color);
+    font-size: 0.9rem;
+    transition: transform 0.1s;
+}
+
+.menu-btn:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.bingo-btn {
+    background: var(--accent-color);
+    color: #fff;
+    border-color: #fff;
+}
+
+/* --- Floating 'Next Where?' Button --- */
+.next-where-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    background: #fff;
+    border: 3px solid var(--primary-color);
+    border-radius: 50px;
+    padding: 15px 25px;
+    z-index: 1000;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-family: var(--font-hand);
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    transform: rotate(-3deg);
+    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation: bounceIn 1s 1s both;
+    /* Delay appearance */
+}
+
+.next-where-btn .icon {
+    font-size: 1.5rem;
+}
+
+.next-where-btn:hover {
+    transform: rotate(0deg) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.next-where-btn:active {
+    transform: rotate(0deg) scale(0.95);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Tooltip/Speech bubble effect */
+.next-where-btn::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    right: 30px;
+    border-width: 10px 10px 0;
+    border-style: solid;
+    border-color: var(--primary-color) transparent;
+    display: block;
+    width: 0;
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3) translateY(100px);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.05) translateY(-10px);
+    }
+
+    70% {
+        transform: scale(0.9) translateY(5px);
+    }
+
+    100% {
+        transform: scale(1) translateY(0) rotate(-3deg);
+    }
+}
+
+/* --- Bingo Link Button --- */
+.btn-large {
+    display: inline-block;
+    padding: 15px 30px;
+    background: #ffec00;
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: 800;
+    text-decoration: none;
+    border-radius: 50px;
+    box-shadow: 0 5px 0 #cc417a;
+    transition: all 0.1s;
+    border: 2px solid #333;
+    font-family: var(--font-heading);
+    margin: 10px 0;
+}
+
+.btn-large:active {
+    transform: translateY(3px);
+    box-shadow: 0 2px 0 #cc417a;
+}
+
+.bingo-link-btn .icon {
+    margin-right: 10px;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+.btn-style {
+    display: inline-block;
+    background: #eee;
+    padding: 5px 10px;
+    border-radius: 4px;
+    color: #333;
+    text-decoration: none;
+    font-size: 0.8rem;
+    margin-top: 5px;
+}

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025年 社員旅行 in 九州</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="theme-color" content="#ff5299">
+    <!-- Google Fonts -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;800&family=Yomogi&display=swap');
+    </style>
+</head>
+
+<body>
+
+    <!-- Floating 'Next Where?' Button -->
+    <button id="next-where-btn" class="next-where-btn">
+        <span class="icon">🤔</span>
+        <span class="text">次どこ？</span>
+    </button>
+
+    <!-- 1. トップ／概要 -->
+    <header class="hero-section magazine-cover" id="top">
+        <div class="container">
+            <div class="cover-badge">THE TRIP 2025</div>
+            <h1>九州<br><span class="highlight-text">湯けむり・食いだおれ</span><br>大合宿</h1>
+            <p class="subtitle">〜別府・博多で裸の付き合い〜</p>
+            <div class="trip-summary">
+                <p class="date"><span class="icon">📅</span> 2025/2/4 (WED) 〜 2/6 (FRI)</p>
+                <p class="location"><span class="icon">♨️</span> 別府温泉 & 博多</p>
+            </div>
+            <div class="emergency-contact-header">
+                <p>緊急連絡: 山田 (090-XXXX-XXXX)</p>
+            </div>
+
+            <!-- Useful Menu Buttons -->
+            <div class="useful-menu-grid">
+                <a href="#hotel" class="menu-btn">🏨 ホテル</a>
+                <a href="#food" class="menu-btn">🍜 グルメ</a>
+                <a href="https://example.com/bingo-app" target="_blank" class="menu-btn bingo-btn">🎯 BINGO</a>
+            </div>
+        </div>
+    </header>
+
+    <nav class="sticky-nav">
+        <ul>
+            <li><a href="#schedule">SCHEDULE</a></li>
+            <li><a href="#bingo">BINGO</a></li>
+            <li><a href="#hotel">HOTEL</a></li>
+            <li><a href="#info">INFO</a></li>
+        </ul>
+    </nav>
+
+    <main class="container magazine-layout">
+
+        <!-- 2. 全体スケジュール（俯瞰） -->
+        <section id="schedule" class="section">
+            <h2 class="section-title tape-heading">全体スケジュール</h2>
+            <div class="overview-schedule">
+                <div class="day-card magazine-card rotate-left">
+                    <span class="day-badge">Day 1</span>
+                    <h3>2/4 (WED)</h3>
+                    <p class="main-event">別府地獄めぐり & 大宴会</p>
+                    <a href="#day1-detail" class="detail-link">詳細へ &gt;</a>
+                </div>
+                <div class="day-card magazine-card rotate-right">
+                    <span class="day-badge">Day 2</span>
+                    <h3>2/5 (THU)</h3>
+                    <p class="main-event">太宰府 & 博多ナイト</p>
+                    <a href="#day2-detail" class="detail-link">詳細へ &gt;</a>
+                </div>
+                <div class="day-card magazine-card rotate-left">
+                    <span class="day-badge">Day 3</span>
+                    <h3>2/6 (FRI)</h3>
+                    <p class="main-event">博多自由観光</p>
+                    <a href="#day3-detail" class="detail-link">詳細へ &gt;</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. 詳細タイムテーブル -->
+        <section id="timetable" class="section">
+            <h2 class="section-title tape-heading">詳細タイムテーブル</h2>
+
+            <!-- Day 1 -->
+            <div id="day1-detail" class="day-detail magazine-paper">
+                <h3 class="day-header">Day 1 <small>2/4(水) 別府</small></h3>
+                <ul class="timeline">
+                    <li class="event move">
+                        <span class="time">07:00</span>
+                        <div class="content">
+                            <h4>各自、大分空港へ移動</h4>
+                            <p class="note">大阪組 8:10着 / 東京組 9:45着</p>
+                        </div>
+                    </li>
+                    <li class="event move">
+                        <span class="time">10:00</span>
+                        <div class="content">
+                            <h4>【バス移動】大分空港 → 別府温泉</h4>
+                            <p class="note">全員集合！</p>
+                        </div>
+                    </li>
+                    <li class="event meal">
+                        <span class="time">11:30</span>
+                        <div class="content">
+                            <h4>全体ランチ</h4>
+                            <p class="note pop-memo">全員が見渡せる場所で！</p>
+                        </div>
+                    </li>
+                    <li class="event activity">
+                        <span class="time">13:00</span>
+                        <div class="content">
+                            <h4>砂風呂 or 地獄めぐり</h4>
+                            <p class="note">温泉で温まろう♨️</p>
+                        </div>
+                    </li>
+                    <li class="event hotel">
+                        <span class="time">15:00</span>
+                        <div class="content">
+                            <h4>ホテルチェックイン</h4>
+                            <p class="note">ホテル別府パストラル</p>
+                        </div>
+                    </li>
+                    <li class="event free">
+                        <span class="time">16:30</span>
+                        <div class="content">
+                            <h4>自由時間</h4>
+                            <p class="note">※企画チームは宴会準備</p>
+                        </div>
+                    </li>
+                    <li class="event party">
+                        <span class="time">18:00</span>
+                        <div class="content">
+                            <span class="pop-badge">Party!</span>
+                            <h4>【一次会】大宴会</h4>
+                            <p class="note">鏡割り・乾杯のみ！食事メイン</p>
+                        </div>
+                    </li>
+                    <li class="event party">
+                        <span class="time">20:00</span>
+                        <div class="content">
+                            <span class="pop-badge">Bingo!</span>
+                            <h4>【二次会】ビンゴゲーム大会</h4>
+                            <p class="note">ステージのある宴会場でコンテンツメイン！</p>
+                        </div>
+                    </li>
+                    <li class="event party">
+                        <span class="time">23:00</span>
+                        <div class="content">
+                            <h4>【三次会】ミニバー・ゲーム大会</h4>
+                            <p class="note">実行委員会部屋にて</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Day 2 -->
+            <div id="day2-detail" class="day-detail magazine-paper">
+                <h3 class="day-header">Day 2 <small>2/5(木) 太宰府・博多</small></h3>
+                <ul class="timeline">
+                    <li class="event free">
+                        <span class="time">朝</span>
+                        <div class="content">
+                            <h4>【自由時間】〜9:30</h4>
+                            <p class="note">9:30 チェックアウト</p>
+                        </div>
+                    </li>
+                    <li class="event move">
+                        <span class="time">10:00</span>
+                        <div class="content">
+                            <h4>【バス移動】別府 → 太宰府 → 博多</h4>
+                            <p class="note">※太宰府お参り</p>
+                        </div>
+                    </li>
+                    <li class="event meal">
+                        <span class="time">11:30</span>
+                        <div class="content">
+                            <h4>【ランチ】太宰府エリア</h4>
+                            <p class="note">炭焼地鶏 山蔵 or 水月庵（湯豆腐）</p>
+                        </div>
+                    </li>
+                    <li class="event free">
+                        <span class="time">14:00</span>
+                        <div class="content">
+                            <h4>【自由時間】チーム別行動</h4>
+                            <p class="note">チームごとにレンタカー手配予定？</p>
+                        </div>
+                    </li>
+                    <li class="event hotel">
+                        <span class="time">18:00</span>
+                        <div class="content">
+                            <h4>博多ホテル チェックイン</h4>
+                            <p class="note">ホテルルートイン博多駅 -博多口-</p>
+                        </div>
+                    </li>
+                    <li class="event meal">
+                        <span class="time">19:00</span>
+                        <div class="content">
+                            <h4>【Dinner】モツ鍋 or 水炊き</h4>
+                            <p class="note">貸切可能な店を予約</p>
+                        </div>
+                    </li>
+                    <li class="event party">
+                        <span class="time">21:00</span>
+                        <div class="content">
+                            <h4>【Party】飲み会 & ミッション発表</h4>
+                            <p class="note">貸切スナック2時間確保！</p>
+                        </div>
+                    </li>
+                    <li class="event party">
+                        <span class="time">23:00</span>
+                        <div class="content">
+                            <h4>【Bar】はしご酒</h4>
+                            <p class="note">バー2-3個（10人ずつ）を予約</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Day 3 -->
+            <div id="day3-detail" class="day-detail magazine-paper">
+                <h3 class="day-header">Day 3 <small>2/6(金) 博多・帰宅</small></h3>
+                <ul class="timeline">
+                    <li class="event free">
+                        <span class="time">AM</span>
+                        <div class="content">
+                            <h4>【自由時間】コンテンツ選択制</h4>
+                            <p class="note">ランチは予約せず、おすすめ紹介！</p>
+                        </div>
+                    </li>
+                    <li class="event move">
+                        <span class="time">10:00</span>
+                        <div class="content">
+                            <h4>ホテル チェックアウト</h4>
+                        </div>
+                    </li>
+                    <li class="event move">
+                        <span class="time">夕方</span>
+                        <div class="content">
+                            <h4>【移動】博多 → 関西・東京</h4>
+                            <p class="note">フライト希望は渡航リストにて</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Bingo Game Section (External Link) -->
+        <section id="bingo" class="section">
+            <h2 class="section-title tape-heading">MISSION BINGO</h2>
+            <div class="content-box magazine-paper" style="background:#fff0fa; text-align:center;">
+                <p>ビンゴ大会は専用アプリで開催！<br>
+                    下のボタンからアクセスして参加してください。</p>
+
+                <div class="mt-20">
+                    <a href="https://example.com/bingo-app" target="_blank" class="btn-large bingo-link-btn">
+                        <span class="icon">🎯</span> ビンゴ会場へGO!
+                    </a>
+                </div>
+                <p class="note mt-10">※ID/PassはSlackで共有します</p>
+            </div>
+        </section>
+
+        <!-- Useful Info -->
+        <section id="hotel" class="section">
+            <h2 class="section-title tape-heading">お役立ち情報</h2>
+
+            <div class="info-card magazine-card">
+                <h3>🏨 1日目: ホテル別府パストラル</h3>
+                <p class="address">別府市東荘園町1-4</p>
+                <div class="tel-box">
+                    <span>TEL</span> <a href="tel:0977234201">0977-23-4201</a>
+                </div>
+                <a href="https://goo.gl/maps/placeholder_beppu" target="_blank" class="map-link btn-style">Maps</a>
+            </div>
+
+            <div class="info-card magazine-card">
+                <h3>🏨 2日目: ホテルルートイン博多駅</h3>
+                <p class="address">福岡市博多区博多駅前1-1-20</p>
+                <div class="tel-box">
+                    <span>TEL</span> <a href="tel:0924778888">092-477-8888</a>
+                </div>
+                <a href="https://goo.gl/maps/placeholder_hakata" target="_blank" class="map-link btn-style">Maps</a>
+            </div>
+
+            <div class="info-card magazine-card">
+                <h3>🍜 おすすめラーメン（博多）</h3>
+                <ul class="check-items">
+                    <li>ShinShin（天神本店）- 行列必至</li>
+                    <li>博多一双 - 泡系豚骨！</li>
+                    <li>元祖長浜屋 - 朝ラーおすすめ</li>
+                </ul>
+                <a href="https://goo.gl/maps/search/hakata_ramen" target="_blank"
+                    class="map-link btn-style">ラーメンマップを開く</a>
+            </div>
+        </section>
+
+        <!-- Contact/Help -->
+        <section id="info" class="section">
+            <h2 class="section-title tape-heading">困ったときは</h2>
+            <div class="contact-box">
+                <p>まずはSlackへ！</p>
+                <p><strong>#trip-2025-kyushu</strong></p>
+                <hr>
+                <p>緊急時連絡先:</p>
+                <p class="phone">幹事 山田: <a href="tel:090xxxxxxxx">090-XXXX-XXXX</a></p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2025 Kyushu Trip Committee</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
