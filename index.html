@@ -22,26 +22,9 @@
     </button>
 
     <!-- 1. トップ／概要 -->
-    <header class="hero-section magazine-cover" id="top">
-        <div class="container">
-            <div class="cover-badge">THE TRIP 2026</div>
-            <h1>PIF official Tour<br>
-                in <span class="text-[#2cbdff]">別府&博多</span></h1>
-            <p class="subtitle">〜ここにサブタイトルがはいります〜</p>
-            <div class="trip-summary">
-                <p class="date"><span class="icon">📅</span> 2025/2/4 (WED) 〜 2/6 (FRI)</p>
-                <p class="location"><span class="icon">♨️</span> 別府温泉 & 博多</p>
-            </div>
-            <div class="emergency-contact-header">
-                <p>緊急連絡: 山田 (090-XXXX-XXXX)</p>
-            </div>
-
-            <!-- Useful Menu Buttons -->
-            <div class="useful-menu-grid">
-                <a href="#hotel" class="menu-btn">🏨 ホテル</a>
-                <a href="#food" class="menu-btn">🍜 グルメ</a>
-                <a href="https://bingoapps.vercel.app/" target="_blank" class="menu-btn bingo-btn">🎯 BINGO</a>
-            </div>
+    <header class="hero-section" id="top">
+        <div class="hero-image-container">
+            <img src="images/top_visual.jpg" alt="2026旅特集 ぴあいえふ PIF official Tour in 別府&博多" class="hero-img">
         </div>
     </header>
 
@@ -60,6 +43,14 @@
         <section id="schedule" class="section">
             <h2 class="section-title tape-heading">全体スケジュール</h2>
             <div class="overview-schedule">
+                <!-- Test Day Link -->
+                <div class="day-card magazine-card" style="transform: rotate(0deg); border-color: red;">
+                    <span class="day-badge" style="background:red;">Test</span>
+                    <h3>12/25 (THU)</h3>
+                    <p class="main-event">Next Whereテスト</p>
+                    <a href="#day0-detail" class="detail-link" style="background:red;">詳細へ &gt;</a>
+                </div>
+
                 <div class="day-card magazine-card rotate-left">
                     <span class="day-badge">Day 1</span>
                     <h3>2/4 (WED)</h3>
@@ -84,6 +75,35 @@
         <!-- 3. 詳細タイムテーブル -->
         <section id="timetable" class="section">
             <h2 class="section-title tape-heading">詳細タイムテーブル</h2>
+
+            <!-- Day 0 (Test) -->
+            <div id="day0-detail" class="day-detail magazine-paper"
+                style="border: 2px dashed red; background: #fff8f8;">
+                <h3 class="day-header" style="background:deeppink;">Day 0 <small>12/25(木) テスト</small></h3>
+                <ul class="timeline">
+                    <li class="event move">
+                        <span class="time">09:00</span>
+                        <div class="content">
+                            <h4>OZU出勤</h4>
+                            <p class="note">出勤時間帯</p>
+                        </div>
+                    </li>
+                    <li class="event activity">
+                        <span class="time">10:00</span>
+                        <div class="content">
+                            <h4>社員旅行MTG</h4>
+                            <p class="note">Next Whereボタンのテスト！</p>
+                        </div>
+                    </li>
+                    <li class="event free">
+                        <span class="time">11:00</span>
+                        <div class="content">
+                            <h4>お腹空いてくる</h4>
+                            <p class="note">ランチの準備</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
 
             <!-- Day 1 -->
             <div id="day1-detail" class="day-detail magazine-paper">
@@ -303,7 +323,7 @@
     </main>
 
     <footer>
-        <p>© 2025 Kyushu Trip Committee</p>
+        <p>PIF社員旅行実行委員会2026</p>
     </footer>
 
     <script src="script.js"></script>

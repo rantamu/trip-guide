@@ -1,32 +1,40 @@
 // --- Configuration ---
-const TRIP_START_DATE = new Date("2025-02-04T00:00:00");
-const TRIP_END_DATE = new Date("2025-02-06T23:59:59");
+const TRIP_START_DATE = new Date("2026-02-04T00:00:00");
+const TRIP_END_DATE = new Date("2026-02-06T23:59:59");
 
 // Itinerary Data (Chronological Order)
 const itinerary = [
-    { start: "2025-02-04T07:00", end: "2025-02-04T10:00", title: "移動（大分空港へ）", next: "バス移動" },
-    { start: "2025-02-04T10:00", end: "2025-02-04T11:30", title: "バス移動 → 別府", next: "全体ランチ" },
-    { start: "2025-02-04T11:30", end: "2025-02-04T13:00", title: "全体ランチ", next: "地獄めぐり" },
-    { start: "2025-02-04T13:00", end: "2025-02-04T15:00", title: "地獄めぐり/砂風呂", next: "ホテルチェックイン" },
-    { start: "2025-02-04T15:00", end: "2025-02-04T16:30", title: "ホテルチェックイン", next: "自由時間" },
-    { start: "2025-02-04T16:30", end: "2025-02-04T18:00", title: "自由時間（宴会準備）", next: "大宴会（一次会）" },
-    { start: "2025-02-04T18:00", end: "2025-02-04T20:00", title: "大宴会（一次会）", next: "ビンゴ大会" },
-    { start: "2025-02-04T20:00", end: "2025-02-04T23:00", title: "ビンゴ大会（二次会）", next: "三次会or就寝" },
-    { start: "2025-02-04T23:00", end: "2025-02-05T07:00", title: "三次会 / 就寝", next: "朝食・出発" },
+    // Day 0: Test Day (2025-12-25)
+    { start: "2025-12-25T09:00", end: "2025-12-25T10:00", title: "OZU出勤", next: "社員旅行MTG" },
+    { start: "2025-12-25T10:00", end: "2025-12-25T11:00", title: "社員旅行MTG", next: "お腹空いてくる" },
+    { start: "2025-12-25T11:00", end: "2025-12-25T12:00", title: "お腹空いてくる", next: "Day1へ" },
 
-    { start: "2025-02-05T07:00", end: "2025-02-05T09:30", title: "朝の自由時間", next: "チェックアウト" },
-    { start: "2025-02-05T09:30", end: "2025-02-05T10:00", title: "チェックアウト", next: "バス移動" },
-    { start: "2025-02-05T10:00", end: "2025-02-05T11:30", title: "バス移動（太宰府へ）", next: "太宰府ランチ" },
-    { start: "2025-02-05T11:30", end: "2025-02-05T14:00", title: "太宰府ランチ&散策", next: "博多へ移動・自由時間" },
-    { start: "2025-02-05T14:00", end: "2025-02-05T18:00", title: "自由時間（チーム行動）", next: "ホテルチェックイン - 博多" },
-    { start: "2025-02-05T18:00", end: "2025-02-05T19:00", title: "ホテルチェックイン", next: "夕食（モツ鍋等）" },
-    { start: "2025-02-05T19:00", end: "2025-02-05T21:00", title: "夕食（チームごと）", next: "全体飲み会" },
-    { start: "2025-02-05T21:00", end: "2025-02-05T23:00", title: "全体飲み会（スナック）", next: "バーはしご酒" },
-    { start: "2025-02-05T23:00", end: "2025-02-06T09:00", title: "はしご酒 / 就寝", next: "Day3 自由行動" },
+    // Day 1: 2026-02-04
+    { start: "2026-02-04T07:00", end: "2026-02-04T10:00", title: "移動（大分空港へ）", next: "バス移動" },
+    { start: "2026-02-04T10:00", end: "2026-02-04T11:30", title: "バス移動 → 別府", next: "全体ランチ" },
+    { start: "2026-02-04T11:30", end: "2026-02-04T13:00", title: "全体ランチ", next: "地獄めぐり" },
+    { start: "2026-02-04T13:00", end: "2026-02-04T15:00", title: "地獄めぐり/砂風呂", next: "ホテルチェックイン" },
+    { start: "2026-02-04T15:00", end: "2026-02-04T16:30", title: "ホテルチェックイン", next: "自由時間" },
+    { start: "2026-02-04T16:30", end: "2026-02-04T18:00", title: "自由時間（宴会準備）", next: "大宴会（一次会）" },
+    { start: "2026-02-04T18:00", end: "2026-02-04T20:00", title: "大宴会（一次会）", next: "ビンゴ大会" },
+    { start: "2026-02-04T20:00", end: "2026-02-04T23:00", title: "ビンゴ大会（二次会）", next: "三次会or就寝" },
+    { start: "2026-02-04T23:00", end: "2026-02-05T07:00", title: "三次会 / 就寝", next: "朝食・出発" },
 
-    { start: "2025-02-06T09:00", end: "2025-02-06T10:00", title: "Day3 自由行動開始", next: "チェックアウト" },
-    { start: "2025-02-06T10:00", end: "2025-02-06T16:00", title: "チェックアウト・自由観光", next: "帰宅の途へ" },
-    { start: "2025-02-06T16:00", end: "2025-02-06T23:59", title: "解散・帰宅", next: "お疲れ様でした！" }
+    // Day 2: 2026-02-05
+    { start: "2026-02-05T07:00", end: "2026-02-05T09:30", title: "朝の自由時間", next: "チェックアウト" },
+    { start: "2026-02-05T09:30", end: "2026-02-05T10:00", title: "チェックアウト", next: "バス移動" },
+    { start: "2026-02-05T10:00", end: "2026-02-05T11:30", title: "バス移動（太宰府へ）", next: "太宰府ランチ" },
+    { start: "2026-02-05T11:30", end: "2026-02-05T14:00", title: "太宰府ランチ&散策", next: "博多へ移動・自由時間" },
+    { start: "2026-02-05T14:00", end: "2026-02-05T18:00", title: "自由時間（チーム行動）", next: "ホテルチェックイン - 博多" },
+    { start: "2026-02-05T18:00", end: "2026-02-05T19:00", title: "ホテルチェックイン", next: "夕食（モツ鍋等）" },
+    { start: "2026-02-05T19:00", end: "2026-02-05T21:00", title: "夕食（チームごと）", next: "全体飲み会" },
+    { start: "2026-02-05T21:00", end: "2026-02-05T23:00", title: "全体飲み会（スナック）", next: "バーはしご酒" },
+    { start: "2026-02-05T23:00", end: "2026-02-06T09:00", title: "はしご酒 / 就寝", next: "Day3 自由行動" },
+
+    // Day 3: 2026-02-06
+    { start: "2026-02-06T09:00", end: "2026-02-06T10:00", title: "Day3 自由行動開始", next: "チェックアウト" },
+    { start: "2026-02-06T10:00", end: "2026-02-06T16:00", title: "チェックアウト・自由観光", next: "帰宅の途へ" },
+    { start: "2026-02-06T16:00", end: "2026-02-06T23:59", title: "解散・帰宅", next: "お疲れ様でした！" }
 ];
 
 // --- "Next Where?" Jump Button Logic ---
@@ -88,7 +96,7 @@ function jumpToCurrentEvent() {
         targetElement.style.background = "#fff9c4"; // Yellow highlight
         setTimeout(() => {
             targetElement.style.background = originalBg;
-        }, 1500);
+        }, 1000);
 
     } else {
         alert("現在の予定が見つかりませんでした（ツアー終了か開始前です）");
@@ -100,8 +108,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Jump Button Event
     const navBtn = document.getElementById('next-where-btn');
+    let jumpInterval = null;
+
     if (navBtn) {
-        navBtn.addEventListener('click', jumpToCurrentEvent);
+        navBtn.addEventListener('click', () => {
+            // Execute immediately on click
+            jumpToCurrentEvent();
+
+            // Clear any existing interval to prevent duplicates
+            if (jumpInterval) clearInterval(jumpInterval);
+
+            // Start repeating every 3 seconds
+            jumpInterval = setInterval(() => {
+                jumpToCurrentEvent();
+            }, 3000);
+        });
     }
 
     // Smooth Scroll for internal links
