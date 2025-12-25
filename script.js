@@ -118,10 +118,14 @@ document.addEventListener('DOMContentLoaded', () => {
             // Clear any existing interval to prevent duplicates
             if (jumpInterval) clearInterval(jumpInterval);
 
-            // Start repeating every 3 seconds
+            // Start repeating animation every 4 seconds
             jumpInterval = setInterval(() => {
-                jumpToCurrentEvent();
-            }, 3000);
+                navBtn.classList.add('animate-shake');
+                // Remove class after animation completes to allow re-triggering
+                setTimeout(() => {
+                    navBtn.classList.remove('animate-shake');
+                }, 400); // Match animation duration
+            }, 4000);
         });
     }
 
