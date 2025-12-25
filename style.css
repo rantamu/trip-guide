@@ -553,8 +553,10 @@ footer {
     color: var(--text-color);
     transform: rotate(-3deg);
     transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.initial-anim {
     animation: bounceIn 1s 1s both;
-    /* Delay appearance */
 }
 
 .next-where-btn .icon {

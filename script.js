@@ -82,9 +82,11 @@ function jumpToCurrentEvent() {
     // Scroll to it
     if (targetIndex !== -1 && eventElements[targetIndex]) {
         const targetElement = eventElements[targetIndex];
-        const headerOffset = 80; // Sticky nav height + padding
-        const elementPosition = targetElement.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        const headerOffset = 80; // Still useful to have some reference, but centering logic overrides specific top offset
+        const elementRect = targetElement.getBoundingClientRect();
+        const absoluteElementTop = elementRect.top + window.pageYOffset;
+        // Center calculation: (Element Top) - (Viewport Height / 2) + (Element Height / 2)
+        const offsetPosition = absoluteElementTop - (window.innerHeight / 2) + (elementRect.height / 2);
 
         window.scrollTo({
             top: offsetPosition,
@@ -112,22 +114,31 @@ document.addEventListener('DOMContentLoaded', () => {
     let jumpInterval = null;
 
     if (navBtn) {
+        // Click Event: Just Jump
         navBtn.addEventListener('click', () => {
-            // Execute immediately on click
             jumpToCurrentEvent();
+            // Optional: Immediate feedback shake
+            navBtn.classList.remove('animate-shake');
+            void navBtn.offsetWidth; // Trigger reflow
+            navBtn.classList.add('animate-shake');
+            setTimeout(() => {
+                navBtn.classList.remove('animate-shake');
+            }, 400);
+        });
 
-            // Clear any existing interval to prevent duplicates
-            if (jumpInterval) clearInterval(jumpInterval);
+        // Auto-Start Animation Loop (after initial entry)
+        setTimeout(() => {
+            // Remove initial entry class to prevent conflict
+            navBtn.classList.remove('initial-anim');
 
-            // Start repeating animation every 4 seconds
-            jumpInterval = setInterval(() => {
+            // Start regular loop
+            setInterval(() => {
                 navBtn.classList.add('animate-shake');
-                // Remove class after animation completes to allow re-triggering
                 setTimeout(() => {
                     navBtn.classList.remove('animate-shake');
-                }, 400); // Match animation duration
+                }, 400);
             }, 4000);
-        });
+        }, 2000); // Wait for bounceIn (1s delay + 1s duration)
     }
 
     // Smooth Scroll for internal links
