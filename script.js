@@ -67,7 +67,8 @@ function jumpToCurrentEvent() {
 
         if (now >= start && now < end) {
             // Found current active event
-            targetIndex = i;
+            // User request: Jump to the NEXT event (i + 1)
+            targetIndex = i + 1;
             break;
         }
 
