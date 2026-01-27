@@ -126,10 +126,12 @@
 }
 
 .sticky-nav img {
-  height: 1.2em;
+  height: 24px;
+  width: auto;
+  max-width: 24px;
   vertical-align: middle;
   margin-right: 4px;
-  margin-top: -2px;
+  object-fit: contain;
 }
 
 .day-theme {
