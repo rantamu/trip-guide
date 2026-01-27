@@ -1,3 +1,29 @@
+/* ヒーローセクション */
+.hero-section {
+  position: relative;
+  width: 100%;
+  /* height: 480px; Removed fixed height */
+  overflow: hidden;
+  background: #fff;
+  margin-bottom: 20px;
+}
+
+.hero-image-container {
+  width: 100%;
+  /* height: 100%; */
+  position: relative;
+  /* clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%); Removed clip-path */
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
+  /* Use auto height */
+  object-fit: contain;
+  /* Ensure full visibility */
+  display: block;
+}
+
 /* ========== セクション見出し ========== */
 .section-header {
   display: flex;
