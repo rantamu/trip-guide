@@ -24,7 +24,7 @@
     <!-- 1. トップ／概要 -->
     <header class="hero-section" id="top">
         <div class="hero-image-container">
-            <img src="images/top_visual.jpg?v=2" alt="2026旅特集 ぴあいえふ PIF official Tour in 別府&博多" class="hero-img">
+            <img src="images/top_visual_fixed.png?v=4" alt="2026旅特集 ぴあいえふ PIF official Tour in 別府&博多" class="hero-img">
         </div>
     </header>
 
@@ -43,14 +43,6 @@
         <section id="schedule" class="section">
             <h2 class="section-title tape-heading">全体スケジュール</h2>
             <div class="overview-schedule">
-                <!-- Test Day Link -->
-                <div class="day-card magazine-card" style="transform: rotate(0deg); border-color: red;">
-                    <span class="day-badge" style="background:red;">Test</span>
-                    <h3>12/25 (THU)</h3>
-                    <p class="main-event">Next Whereテスト</p>
-                    <a href="#day0-detail" class="detail-link" style="background:red;">詳細へ &gt;</a>
-                </div>
-
                 <div class="day-card magazine-card rotate-left">
                     <span class="day-badge">Day 1</span>
                     <h3>2/4 (WED)</h3>
@@ -76,7 +68,8 @@
         <section id="timetable" class="section">
             <h2 class="section-title tape-heading">詳細タイムテーブル</h2>
 
-            <!-- Day 0 (Test) -->
+            <!-- Day 0 (Test) - Commented out as requested -->
+            <!--
             <div id="day0-detail" class="day-detail magazine-paper"
                 style="border: 2px dashed red; background: #fff8f8;">
                 <h3 class="day-header" style="background:deeppink;">Day 0 <small>12/25(木) テスト</small></h3>
@@ -104,10 +97,11 @@
                     </li>
                 </ul>
             </div>
+            -->
 
             <!-- Day 1 -->
             <div id="day1-detail" class="day-detail magazine-paper">
-                <h3 class="day-header">Day 1 <small>2/4(水) 別府</small></h3>
+                <h3 class="day-header">Day 1 <small>2/4(水) 別府・地獄めぐり</small></h3>
                 <ul class="timeline">
                     <li class="event move">
                         <span class="time">07:00</span>
@@ -126,19 +120,44 @@
                     <li class="event meal">
                         <span class="time">11:30</span>
                         <div class="content">
-                            <h4>全体ランチ</h4>
-                            <p class="note pop-memo">全員が見渡せる場所で！</p>
+                            <h4>みんなでランチ「地獄蒸し！」</h4>
+                            <div class="note">
+                                <a href="https://enma-ch.com/" target="_blank" class="detail-link"
+                                    style="margin-top:0;">地熱観光ラボ縁間</a>
+                            </div>
                         </div>
                     </li>
-                    <li class="event activity">
-                        <span class="time">13:00</span>
+
+                    <!-- Split Team Section -->
+                    <li class="event activity"
+                        style="background:#f0f8ff; padding:10px; border-radius:10px; border:2px dashed #acd6ff;">
+                        <span class="time">午後</span>
                         <div class="content">
-                            <h4>砂風呂 or 地獄めぐり</h4>
-                            <p class="note">温泉で温まろう♨️</p>
+                            <h4 style="color:#0066cc;">二手に分かれます！</h4>
+
+                            <div style="margin-bottom:15px;">
+                                <strong>●山口、遠山、迫田チーム</strong>
+                                <ul style="margin-left:20px; font-size:0.9em;">
+                                    <li>13:30 砂風呂開始！（13:15入店）</li>
+                                    <li>14:00 地獄めぐり ♨️</li>
+                                    <li>15:30 集合してホテルへ！</li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <strong>●高杉、木村、市倉チーム</strong>
+                                <ul style="margin-left:20px; font-size:0.9em;">
+                                    <li>13:15 地獄めぐり ♨️</li>
+                                    <li>14:30 集合して砂風呂へ！</li>
+                                    <li>15:00 砂風呂開始！(14:45入店)</li>
+                                    <li>15:30 集合してホテルへ！</li>
+                                </ul>
+                            </div>
                         </div>
                     </li>
+
                     <li class="event hotel">
-                        <span class="time">15:00</span>
+                        <span class="time">16:00</span>
                         <div class="content">
                             <h4>ホテルチェックイン</h4>
                             <p class="note">ホテル別府パストラル</p>
@@ -148,30 +167,24 @@
                         <span class="time">16:30</span>
                         <div class="content">
                             <h4>自由時間</h4>
-                            <p class="note">※企画チームは宴会準備</p>
                         </div>
                     </li>
                     <li class="event party">
                         <span class="time">18:00</span>
                         <div class="content">
-
-                            <h4>【一次会】大宴会</h4>
-                            <p class="note">鏡割り・乾杯のみ！食事メイン</p>
+                            <h4>【大宴会】ごちそうをいただきます！！</h4>
                         </div>
                     </li>
                     <li class="event party">
                         <span class="time">20:00</span>
                         <div class="content">
-
-                            <h4>【二次会】ビンゴゲーム大会</h4>
-                            <p class="note">ステージのある宴会場でコンテンツメイン！</p>
+                            <h4>【二次会】2次会も楽しもう！</h4>
                         </div>
                     </li>
-                    <li class="event party">
+                    <li class="event free">
                         <span class="time">23:00</span>
                         <div class="content">
-                            <h4>【三次会】ミニバー・ゲーム大会</h4>
-                            <p class="note">実行委員会部屋にて</p>
+                            <h4>自由時間</h4>
                         </div>
                     </li>
                 </ul>
@@ -181,60 +194,59 @@
             <div id="day2-detail" class="day-detail magazine-paper">
                 <h3 class="day-header">Day 2 <small>2/5(木) 太宰府・博多</small></h3>
                 <ul class="timeline">
-                    <li class="event free">
-                        <span class="time">朝</span>
+                    <li class="event meal">
+                        <span class="time">07:30</span>
                         <div class="content">
-                            <h4>【自由時間】〜9:30</h4>
-                            <p class="note">9:30 チェックアウト</p>
+                            <h4>朝食！</h4>
                         </div>
                     </li>
                     <li class="event move">
-                        <span class="time">10:00</span>
+                        <span class="time">09:00</span>
                         <div class="content">
-                            <h4>【バス移動】別府 → 太宰府 → 博多</h4>
-                            <p class="note">※太宰府お参り</p>
+                            <h4>ロビー集合</h4>
+                        </div>
+                    </li>
+                    <li class="event move">
+                        <span class="time">09:30</span>
+                        <div class="content">
+                            <h4>【移動】別府 → 太宰府</h4>
                         </div>
                     </li>
                     <li class="event meal">
-                        <span class="time">11:30</span>
+                        <span class="time">12:00</span>
                         <div class="content">
-                            <h4>【ランチ】太宰府エリア</h4>
-                            <p class="note">炭焼地鶏 山蔵 or 水月庵（湯豆腐）</p>
+                            <h4>【ランチ】太宰府</h4>
                         </div>
                     </li>
                     <li class="event free">
                         <span class="time">14:00</span>
                         <div class="content">
-                            <h4>【自由時間】チーム別行動</h4>
-                            <p class="note">チームごとにレンタカー手配予定？</p>
+                            <h4>自由時間！</h4>
+                            <p class="note">レンタカー手配してます！（トヨタレンタカー博多駅前）</p>
                         </div>
                     </li>
                     <li class="event hotel">
                         <span class="time">18:00</span>
                         <div class="content">
-                            <h4>博多ホテル チェックイン</h4>
+                            <h4>ホテルチェックイン</h4>
                             <p class="note">ホテルルートイン博多駅 -博多口-</p>
                         </div>
                     </li>
                     <li class="event meal">
                         <span class="time">19:00</span>
                         <div class="content">
-                            <h4>【Dinner】モツ鍋 or 水炊き</h4>
-                            <p class="note">貸切可能な店を予約</p>
+                            <h4>【Dinner】ぢどり屋大和 別館</h4>
+                            <div class="note">
+                                <a href="https://tabelog.com/fukuoka/A4001/A400101/40001216/" target="_blank"
+                                    class="detail-link" style="margin-top:0;">食べログを見る</a><br>
+                                TEL: 050-5869-7116
+                            </div>
                         </div>
                     </li>
                     <li class="event party">
                         <span class="time">21:00</span>
                         <div class="content">
-                            <h4>【Party】飲み会 & ミッション発表</h4>
-                            <p class="note">貸切スナック2時間確保！</p>
-                        </div>
-                    </li>
-                    <li class="event party">
-                        <span class="time">23:00</span>
-                        <div class="content">
-                            <h4>【Bar】はしご酒</h4>
-                            <p class="note">バー2-3個（10人ずつ）を予約</p>
+                            <h4>【Party】2軒目へGO！🎤🏓🍜</h4>
                         </div>
                     </li>
                 </ul>
@@ -244,24 +256,43 @@
             <div id="day3-detail" class="day-detail magazine-paper">
                 <h3 class="day-header">Day 3 <small>2/6(金) 博多・帰宅</small></h3>
                 <ul class="timeline">
-                    <li class="event free">
-                        <span class="time">AM</span>
+                    <li class="event move">
+                        <span class="time">09:45</span>
                         <div class="content">
-                            <h4>【自由時間】コンテンツ選択制</h4>
-                            <p class="note">ランチは予約せず、おすすめ紹介！</p>
+                            <h4>ロビー集合＆チェックアウト</h4>
                         </div>
                     </li>
-                    <li class="event move">
+                    <li class="event free">
                         <span class="time">10:00</span>
                         <div class="content">
-                            <h4>ホテル チェックアウト</h4>
+                            <h4>自由行動 & お土産購入</h4>
+                            <p class="note">博多駅・天神周辺</p>
+                        </div>
+                    </li>
+                    <li class="event meal">
+                        <span class="time">12:00</span>
+                        <div class="content">
+                            <h4>【各自でランチ】ラスト福岡飯</h4>
                         </div>
                     </li>
                     <li class="event move">
-                        <span class="time">夕方</span>
+                        <span class="time">14:00</span>
                         <div class="content">
-                            <h4>【移動】博多 → 関西・東京</h4>
-                            <p class="note">フライト希望は渡航リストにて</p>
+                            <h4>レンタカー返却</h4>
+                            <p class="note">福岡空港で返却</p>
+                        </div>
+                    </li>
+                    <li class="event move">
+                        <span class="time">14:30</span>
+                        <div class="content">
+                            <h4>空港集合</h4>
+                        </div>
+                    </li>
+                    <li class="event move">
+                        <span class="time">15:00</span>
+                        <div class="content">
+                            <h4>解散・フライト</h4>
+                            <p class="note">東京組 16:00発 / 大阪組 17:00発</p>
                         </div>
                     </li>
                 </ul>
