@@ -121,6 +121,17 @@
   margin-bottom: 6px;
 }
 
+.sticky-nav a:hover {
+  color: var(--primary-color);
+}
+
+.sticky-nav img {
+  height: 1.2em;
+  vertical-align: middle;
+  margin-right: 4px;
+  margin-top: -2px;
+}
+
 .day-theme {
   font-family: var(--font-hand);
   font-size: 0.95rem;

@@ -1,80 +1,80 @@
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;800&family=Yomogi&display=swap');
 
 :root {
-    /* Pop Colors */
-    --primary-color: #ff5299;
-    /* Hot Pink */
-    --secondary-color: #ff9f1c;
-    /* Vibrant Orange */
-    --accent-color: #2cbdff;
-    /* Cyan Blue */
-    --bg-color: #fffef8;
-    /* Creamy White */
-    --text-color: #4a4a4a;
-    --text-light: #fff;
+  /* Pop Colors */
+  --primary-color: #ff5299;
+  /* Hot Pink */
+  --secondary-color: #ff9f1c;
+  /* Vibrant Orange */
+  --accent-color: #2cbdff;
+  /* Cyan Blue */
+  --bg-color: #fffef8;
+  /* Creamy White */
+  --text-color: #4a4a4a;
+  --text-light: #fff;
 
-    /* Paper & Shadow */
-    --paper-shadow: 2px 3px 10px rgba(0, 0, 0, 0.1);
-    --tape-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-    --border-radius: 12px;
+  /* Paper & Shadow */
+  --paper-shadow: 2px 3px 10px rgba(0, 0, 0, 0.1);
+  --tape-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  --border-radius: 12px;
 
-    --font-heading: 'M PLUS Rounded 1c', sans-serif;
-    --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    --font-hand: 'Yomogi', cursive;
+  --font-heading: 'M PLUS Rounded 1c', sans-serif;
+  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-hand: 'Yomogi', cursive;
 
-    /* Sugoroku Timeline Colors */
-    --masking-tape-green: #98D4BB;
-    --masking-tape-pink: #F7C6C7;
-    --masking-tape-blue: #B8D4E8;
-    --masking-tape-yellow: #F7E4A3;
-    --card-bg: rgba(255, 255, 255, 0.95);
+  /* Sugoroku Timeline Colors */
+  --masking-tape-green: #98D4BB;
+  --masking-tape-pink: #F7C6C7;
+  --masking-tape-blue: #B8D4E8;
+  --masking-tape-yellow: #F7E4A3;
+  --card-bg: rgba(255, 255, 255, 0.95);
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: var(--font-body);
-    background-color: var(--bg-color);
-    /* Polka dot pattern background */
-    background-image: radial-gradient(var(--secondary-color) 1px, transparent 1px), radial-gradient(var(--primary-color) 1px, transparent 1px);
-    background-size: 20px 20px;
-    background-position: 0 0, 10px 10px;
-    color: var(--text-color);
-    line-height: 1.6;
-    overflow-x: hidden;
-    /* For tilted elements */
+  font-family: var(--font-body);
+  background-color: var(--bg-color);
+  /* Polka dot pattern background */
+  background-image: radial-gradient(var(--secondary-color) 1px, transparent 1px), radial-gradient(var(--primary-color) 1px, transparent 1px);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+  color: var(--text-color);
+  line-height: 1.6;
+  overflow-x: hidden;
+  /* For tilted elements */
 }
 
 /* Utilities */
 .container {
-    padding: 0 20px;
-    max-width: 600px;
-    margin: 0 auto;
+  padding: 0 20px;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 a {
-    transition: opacity 0.2s;
+  transition: opacity 0.2s;
 }
 
 a:hover {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 
 .section {
-    padding: 60px 0;
-    position: relative;
-    /* Zigzag border bottom using CSS gradients */
-    background:
-        linear-gradient(135deg, transparent 10px, rgba(255, 255, 255, 0.8) 0) top left,
-        linear-gradient(225deg, transparent 10px, rgba(255, 255, 255, 0.8) 0) top right,
-        linear-gradient(315deg, transparent 10px, rgba(255, 255, 255, 0.8) 0) bottom right,
-        linear-gradient(45deg, transparent 10px, rgba(255, 255, 255, 0.8) 0) bottom left;
-    background-size: 50% 50%;
-    background-repeat: repeat-x;
+  padding: 60px 0;
+  position: relative;
+  /* Zigzag border bottom using CSS gradients */
+  background:
+    linear-gradient(135deg, transparent 10px, rgba(255, 255, 255, 0.8) 0) top left,
+    linear-gradient(225deg, transparent 10px, rgba(255, 255, 255, 0.8) 0) top right,
+    linear-gradient(315deg, transparent 10px, rgba(255, 255, 255, 0.8) 0) bottom right,
+    linear-gradient(45deg, transparent 10px, rgba(255, 255, 255, 0.8) 0) bottom left;
+  background-size: 50% 50%;
+  background-repeat: repeat-x;
 }
 
 /* Typography */
@@ -82,48 +82,51 @@ h1,
 h2,
 h3,
 h4 {
-    font-family: var(--font-heading);
-    letter-spacing: 0.05em;
+  font-family: var(--font-heading);
+  letter-spacing: 0.05em;
 }
 
 .highlight-text {
-    color: var(--primary-color);
-    font-size: 1.2em;
-    text-shadow: 2px 2px 0 #fff, 4px 4px 0 var(--accent-color);
+  color: var(--primary-color);
+  font-size: 1.2em;
+  text-shadow: 2px 2px 0 #fff, 4px 4px 0 var(--accent-color);
 }
 
 .handwriting {
-    font-family: var(--font-hand);
-    transform: rotate(-2deg);
-    color: var(--text-color);
+  font-family: var(--font-hand);
+  transform: rotate(-2deg);
+  color: var(--text-color);
 }
 
 /* --- Hero Section / Magazine Cover --- */
 /* --- Hero Section / Magazine Cover --- */
 .hero-section {
-    position: relative;
-    width: 100%;
-    max-width: 100vw;
-    /* Prevent horizontal overflow */
-    overflow: hidden;
-    /* Clip potentially overflowing elements */
-    /* Remove padding/background as image handles it */
-    padding: 0;
-    margin-bottom: 2rem;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  width: 100%;
+  max-width: 100vw;
+  /* Prevent horizontal overflow */
+  overflow: hidden;
+  /* Clip potentially overflowing elements */
+  /* Remove padding/background as image handles it */
+  padding: 0;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .hero-image-container {
-    width: 100%;
-    position: relative;
-    line-height: 0;
-    /* Remove potential gap below image */
+  width: 100%;
+  position: relative;
+  line-height: 0;
+  /* Remove potential gap below image */
 }
 
 .hero-img {
-    width: 100%;
-    height: auto;
-    display: block;
+  width: 100%;
+  height: 480px;
+  /* Adjusted height as requested */
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
 /* Old text styles removed/commented out for cleanup */
@@ -140,1074 +143,1134 @@ h4 {
 */
 
 .hero-section .subtitle {
-    font-family: var(--font-hand);
-    font-size: 1.5rem;
-    color: #fff;
-    background: var(--secondary-color);
-    display: inline-block;
-    padding: 5px 20px;
-    transform: rotate(2deg);
-    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
+  font-family: var(--font-hand);
+  font-size: 1.5rem;
+  color: #fff;
+  background: var(--secondary-color);
+  display: inline-block;
+  padding: 5px 20px;
+  transform: rotate(2deg);
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
 }
 
 .trip-summary {
-    background: rgba(255, 255, 255, 0.9);
-    color: #333;
-    padding: 20px;
-    border-radius: var(--border-radius);
-    display: inline-block;
-    text-align: left;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    transform: rotate(-1deg);
-    max-width: 90%;
-    text-shadow: none;
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+  padding: 20px;
+  border-radius: var(--border-radius);
+  display: inline-block;
+  text-align: left;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transform: rotate(-1deg);
+  max-width: 90%;
+  text-shadow: none;
 }
 
 .emergency-contact-header {
-    margin-top: 20px;
-    background: #333;
-    color: #fff;
-    display: inline-block;
-    padding: 5px 15px;
-    border-radius: 30px;
-    font-size: 0.9rem;
-    text-shadow: none;
+  margin-top: 20px;
+  background: #333;
+  color: #fff;
+  display: inline-block;
+  padding: 5px 15px;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  text-shadow: none;
 }
 
 /* --- Sticky Nav --- */
 .sticky-nav {
-    position: sticky;
-    top: 10px;
-    z-index: 100;
-    margin: 0 10px;
+  position: sticky;
+  top: 10px;
+  z-index: 100;
+  margin: 0 10px;
 }
 
 .sticky-nav ul {
-    background: #fff;
-    display: flex;
-    justify-content: space-around;
-    padding: 10px;
-    border-radius: 50px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    border: 3px solid var(--accent-color);
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  border-radius: 50px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border: 3px solid var(--accent-color);
 }
 
 .sticky-nav a {
-    color: var(--text-color);
-    font-weight: 800;
-    font-family: var(--font-heading);
-    font-size: 0.8rem;
-    text-decoration: none;
-    text-transform: uppercase;
+  color: var(--text-color);
+  font-weight: 800;
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 .sticky-nav a:hover {
-    color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 /* --- Tape Heading Effect --- */
 .tape-heading {
-    text-align: center;
-    font-size: 1.8rem;
-    color: var(--text-color);
-    background: rgba(255, 255, 255, 0.9);
-    display: inline-block;
-    padding: 10px 40px;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%) rotate(-2deg);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 40px;
-    border-left: none;
-    /* Reset old style */
+  text-align: center;
+  font-size: 1.8rem;
+  color: var(--text-color);
+  background: rgba(255, 255, 255, 0.9);
+  display: inline-block;
+  padding: 10px 40px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%) rotate(-2deg);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  border-left: none;
+  /* Reset old style */
 }
 
 /* CSS Tape Strips using pseudo elements */
 .tape-heading::before,
 .tape-heading::after {
-    content: '';
-    position: absolute;
-    width: 40px;
-    height: 100px;
-    background: rgba(255, 255, 255, 0.4);
-    top: -30px;
-    border-left: 1px dashed rgba(0, 0, 0, 0.1);
-    border-right: 1px dashed rgba(0, 0, 0, 0.1);
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.4);
+  top: -30px;
+  border-left: 1px dashed rgba(0, 0, 0, 0.1);
+  border-right: 1px dashed rgba(0, 0, 0, 0.1);
 }
 
 .tape-heading::before {
-    left: -15px;
-    background: linear-gradient(45deg, rgba(255, 255, 255, 0.5) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0.5) 75%, transparent 75%, transparent);
-    background-color: var(--primary-color);
-    background-size: 10px 10px;
-    transform: rotate(-45deg);
-    opacity: 0.6;
-    height: 30px;
-    width: 80px;
-    top: 50%;
-    margin-top: -15px;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
-    -webkit-mask-image: linear-gradient(90deg, transparent 5%, black 5%, black 95%, transparent 95%);
+  left: -15px;
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.5) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0.5) 75%, transparent 75%, transparent);
+  background-color: var(--primary-color);
+  background-size: 10px 10px;
+  transform: rotate(-45deg);
+  opacity: 0.6;
+  height: 30px;
+  width: 80px;
+  top: 50%;
+  margin-top: -15px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  -webkit-mask-image: linear-gradient(90deg, transparent 5%, black 5%, black 95%, transparent 95%);
 }
 
 .tape-heading::after {
-    right: -15px;
-    background: linear-gradient(-45deg, rgba(255, 255, 255, 0.5) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0.5) 75%, transparent 75%, transparent);
-    background-color: var(--accent-color);
-    background-size: 10px 10px;
-    transform: rotate(45deg);
-    opacity: 0.6;
-    height: 30px;
-    width: 80px;
-    top: 50%;
-    margin-top: -15px;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  right: -15px;
+  background: linear-gradient(-45deg, rgba(255, 255, 255, 0.5) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0.5) 75%, transparent 75%, transparent);
+  background-color: var(--accent-color);
+  background-size: 10px 10px;
+  transform: rotate(45deg);
+  opacity: 0.6;
+  height: 30px;
+  width: 80px;
+  top: 50%;
+  margin-top: -15px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
 }
 
 /* --- Magazine Card --- */
 .magazine-card {
-    background: #fff;
-    padding: 20px;
-    position: relative;
-    border: 1px solid #eee;
-    box-shadow: var(--paper-shadow);
-    transition: transform 0.2s;
-    margin-bottom: 20px;
+  background: #fff;
+  padding: 20px;
+  position: relative;
+  border: 1px solid #eee;
+  box-shadow: var(--paper-shadow);
+  transition: transform 0.2s;
+  margin-bottom: 20px;
 }
 
 .magazine-card {
-    border: 5px solid #fff;
-    outline: 1px solid #ddd;
+  border: 5px solid #fff;
+  outline: 1px solid #ddd;
 }
 
 .magazine-card:hover {
-    transform: scale(1.02) rotate(0deg) !important;
-    z-index: 10;
+  transform: scale(1.02) rotate(0deg) !important;
+  z-index: 10;
 }
 
 .rotate-left {
-    transform: rotate(-2deg);
+  transform: rotate(-2deg);
 }
 
 .rotate-right {
-    transform: rotate(2deg);
+  transform: rotate(2deg);
 }
 
 .day-badge {
-    position: absolute;
-    top: -15px;
-    left: -10px;
-    background: var(--secondary-color);
-    color: #fff;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    font-family: var(--font-heading);
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-    border: 2px solid #fff;
+  position: absolute;
+  top: -15px;
+  left: -10px;
+  background: var(--secondary-color);
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-family: var(--font-heading);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  border: 2px solid #fff;
 }
 
 .day-card h3 {
-    margin-top: 15px;
-    color: var(--primary-color);
-    font-size: 1.4rem;
-    border-bottom: 2px dashed #ddd;
-    padding-bottom: 5px;
-    margin-bottom: 10px;
+  margin-top: 15px;
+  color: var(--primary-color);
+  font-size: 1.4rem;
+  border-bottom: 2px dashed #ddd;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .main-event {
-    font-weight: bold;
-    font-size: 1.1rem;
+  font-weight: bold;
+  font-size: 1.1rem;
 }
 
 .detail-link {
-    display: inline-block;
-    margin-top: 10px;
-    background: var(--accent-color);
-    color: #fff;
-    padding: 5px 15px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: bold;
-    text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+  background: var(--accent-color);
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 /* --- Magazine Paper Detail Section --- */
 .magazine-paper {
-    background: #fff;
-    padding: 20px;
-    border: 1px solid #ddd;
-    box-shadow: 5px 5px 0 var(--accent-color);
-    margin-bottom: 40px;
-    position: relative;
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  box-shadow: 5px 5px 0 var(--accent-color);
+  margin-bottom: 40px;
+  position: relative;
 }
 
 .magazine-paper::before {
-    content: '';
-    position: absolute;
-    left: 10px;
-    top: 0;
-    bottom: 0;
-    border-left: 2px dotted #ccc;
-    width: 1px;
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: 0;
+  bottom: 0;
+  border-left: 2px dotted #ccc;
+  width: 1px;
 }
 
 .day-header {
-    background: var(--primary-color);
-    color: #fff;
-    padding: 10px 20px;
-    display: inline-block;
-    transform: rotate(-1deg);
-    margin-left: -30px;
-    /* Stick out */
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-    margin-bottom: 20px;
-    font-size: 1.5rem;
+  background: var(--primary-color);
+  color: #fff;
+  padding: 10px 20px;
+  display: inline-block;
+  transform: rotate(-1deg);
+  margin-left: -30px;
+  /* Stick out */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  font-size: 1.5rem;
 }
 
 .day-header small {
-    font-size: 0.8em;
-    font-weight: normal;
-    margin-left: 10px;
+  font-size: 0.8em;
+  font-weight: normal;
+  margin-left: 10px;
 }
 
 /* Timeline Updates */
 .timeline {
-    border-left: 3px solid #eee;
+  border-left: 3px solid #eee;
 }
 
 .event {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .event::before {
-    width: 14px;
-    height: 14px;
-    left: -28px;
-    /* Adjusted */
-    top: 8px;
-    border: 3px solid #fff;
-    box-shadow: 0 0 0 1px #ddd;
+  width: 14px;
+  height: 14px;
+  left: -28px;
+  /* Adjusted */
+  top: 8px;
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 1px #ddd;
 }
 
 .event .time {
-    background: #eee;
-    padding: 2px 8px;
-    border-radius: 4px;
-    font-size: 0.9rem;
-    display: inline-block;
+  background: #eee;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  display: inline-block;
 }
 
 .event h4 {
-    font-size: 1.2rem;
-    margin: 5px 0;
+  font-size: 1.2rem;
+  margin: 5px 0;
 }
 
 /* Pop Badges & Memo */
 .pop-badge {
-    display: inline-block;
-    background: #ffec00;
-    color: #333;
-    font-size: 0.7rem;
-    font-weight: 900;
-    padding: 2px 6px;
-    transform: rotate(-5deg);
-    border: 1px solid #333;
-    position: absolute;
-    top: -10px;
-    right: 0;
-    z-index: 10;
+  display: inline-block;
+  background: #ffec00;
+  color: #333;
+  font-size: 0.7rem;
+  font-weight: 900;
+  padding: 2px 6px;
+  transform: rotate(-5deg);
+  border: 1px solid #333;
+  position: absolute;
+  top: -10px;
+  right: 0;
+  z-index: 10;
 }
 
 .pop-memo {
-    font-family: var(--font-hand);
-    color: var(--primary-color);
-    font-size: 1.1rem;
-    background: rgba(255, 255, 0, 0.1);
-    transform: rotate(1deg);
-    display: inline-block;
-    padding: 0 5px;
+  font-family: var(--font-hand);
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  background: rgba(255, 255, 0, 0.1);
+  transform: rotate(1deg);
+  display: inline-block;
+  padding: 0 5px;
 }
 
 /* --- Info Cards --- */
 .flight-info {
-    border: 2px dashed #ddd;
-    padding: 15px;
-    margin: 10px 0;
-    background: #fdfdfd;
+  border: 2px dashed #ddd;
+  padding: 15px;
+  margin: 10px 0;
+  background: #fdfdfd;
 }
 
 .highlight-box {
-    background: #ffffcc;
-    padding: 5px;
-    border-bottom: 1px solid #ffeebb;
+  background: #ffffcc;
+  padding: 5px;
+  border-bottom: 1px solid #ffeebb;
 }
 
 /* --- List Items --- */
 .magazine-list li {
-    background: #fff;
-    border-bottom: 1px dotted #ccc;
-    padding: 15px 0;
-    display: flex;
-    align-items: flex-start;
+  background: #fff;
+  border-bottom: 1px dotted #ccc;
+  padding: 15px 0;
+  display: flex;
+  align-items: flex-start;
 }
 
 .list-badge {
-    background: var(--text-color);
-    color: #fff;
-    font-size: 0.7rem;
-    padding: 2px 5px;
-    margin-right: 15px;
-    min-width: 70px;
-    text-align: center;
-    font-weight: bold;
-    border-radius: 4px;
+  background: var(--text-color);
+  color: #fff;
+  font-size: 0.7rem;
+  padding: 2px 5px;
+  margin-right: 15px;
+  min-width: 70px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 4px;
 }
 
 /* --- Content Box --- */
 .content-box {
-    padding: 10px;
+  padding: 10px;
 }
 
 /* --- Checklist Handwritings --- */
 .checklist {
-    background: #fff9c4;
-    /* Yellow paper */
-    border: none;
-    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
-    transform: rotate(1deg);
+  background: #fff9c4;
+  /* Yellow paper */
+  border: none;
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+  transform: rotate(1deg);
 }
 
 .check-items li {
-    font-family: var(--font-hand);
-    font-size: 1.1rem;
-    padding-left: 25px;
+  font-family: var(--font-hand);
+  font-size: 1.1rem;
+  padding-left: 25px;
 }
 
 .check-items li::before {
-    content: '□';
-    /* Checkbox */
-    position: absolute;
-    left: 0;
-    font-size: 1.2rem;
-    color: var(--text-color);
+  content: '□';
+  /* Checkbox */
+  position: absolute;
+  left: 0;
+  font-size: 1.2rem;
+  color: var(--text-color);
 }
 
 footer {
-    background: var(--primary-color);
-    margin-top: 40px;
-    color: white;
-    text-align: center;
-    padding: 20px;
+  background: var(--primary-color);
+  margin-top: 40px;
+  color: white;
+  text-align: center;
+  padding: 20px;
 }
 
 /* --- Useful Menu Buttons (Hero) --- */
 .useful-menu-grid {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
 }
 
 .menu-btn {
-    background: #fff;
-    color: var(--primary-color);
-    padding: 10px 15px;
-    border-radius: 30px;
-    font-weight: 800;
-    text-decoration: none;
-    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.1);
-    border: 2px solid var(--primary-color);
-    font-size: 0.9rem;
-    transition: transform 0.1s;
+  background: #fff;
+  color: var(--primary-color);
+  padding: 10px 15px;
+  border-radius: 30px;
+  font-weight: 800;
+  text-decoration: none;
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.1);
+  border: 2px solid var(--primary-color);
+  font-size: 0.9rem;
+  transition: transform 0.1s;
 }
 
 .menu-btn:active {
-    transform: translateY(2px);
-    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
 }
 
 .bingo-btn {
-    background: var(--accent-color);
-    color: #fff;
-    border-color: #fff;
+  background: var(--accent-color);
+  color: #fff;
+  border-color: #fff;
 }
 
 /* --- Floating 'Next Where?' Button --- */
 .next-where-btn {
-    position: fixed;
-    bottom: 30px;
-    right: 20px;
-    background: #fff;
-    border: 3px solid var(--primary-color);
-    border-radius: 50px;
-    padding: 15px 25px;
-    z-index: 1000;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    cursor: pointer;
-    font-family: var(--font-hand);
-    font-weight: bold;
-    font-size: 1.2rem;
-    color: var(--text-color);
-    transform: rotate(-3deg);
-    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  background: #fff;
+  border: 3px solid var(--primary-color);
+  border-radius: 50px;
+  padding: 15px 25px;
+  z-index: 1000;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-family: var(--font-hand);
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: var(--text-color);
+  transform: rotate(-3deg);
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .initial-anim {
-    animation: bounceIn 1s 1s both;
+  animation: bounceIn 1s 1s both;
 }
 
 .next-where-btn .icon {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 .next-where-btn:hover {
-    transform: rotate(0deg) scale(1.05);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transform: rotate(0deg) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 .next-where-btn:active {
-    transform: rotate(0deg) scale(0.95);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transform: rotate(0deg) scale(0.95);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 /* Tooltip/Speech bubble effect */
 .next-where-btn::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    right: 30px;
-    border-width: 10px 10px 0;
-    border-style: solid;
-    border-color: var(--primary-color) transparent;
-    display: block;
-    width: 0;
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  right: 30px;
+  border-width: 10px 10px 0;
+  border-style: solid;
+  border-color: var(--primary-color) transparent;
+  display: block;
+  width: 0;
 }
 
 @keyframes bounceIn {
-    0% {
-        opacity: 0;
-        transform: scale(0.3) translateY(100px);
-    }
+  0% {
+    opacity: 0;
+    transform: scale(0.3) translateY(100px);
+  }
 
-    50% {
-        opacity: 1;
-        transform: scale(1.05) translateY(-10px);
-    }
+  50% {
+    opacity: 1;
+    transform: scale(1.05) translateY(-10px);
+  }
 
-    70% {
-        transform: scale(0.9) translateY(5px);
-    }
+  70% {
+    transform: scale(0.9) translateY(5px);
+  }
 
-    100% {
-        transform: scale(1) translateY(0) rotate(-3deg);
-    }
+  100% {
+    transform: scale(1) translateY(0) rotate(-3deg);
+  }
 }
 
 @keyframes gentleShake {
-    0% {
-        transform: rotate(-3deg);
-    }
+  0% {
+    transform: rotate(-3deg);
+  }
 
-    25% {
-        transform: rotate(-8deg);
-    }
+  25% {
+    transform: rotate(-8deg);
+  }
 
-    50% {
-        transform: rotate(-3deg);
-    }
+  50% {
+    transform: rotate(-3deg);
+  }
 
-    75% {
-        transform: rotate(0deg);
-    }
+  75% {
+    transform: rotate(0deg);
+  }
 
-    100% {
-        transform: rotate(-3deg);
-    }
+  100% {
+    transform: rotate(-3deg);
+  }
 }
 
 .animate-shake {
-    animation: gentleShake 0.4s ease-in-out;
+  animation: gentleShake 0.4s ease-in-out;
 }
 
 /* --- Bingo Link Button --- */
 .btn-large {
-    display: inline-block;
-    padding: 15px 30px;
-    background: #ffec00;
-    color: #333;
-    font-size: 1.2rem;
-    font-weight: 800;
-    text-decoration: none;
-    border-radius: 50px;
-    box-shadow: 0 5px 0 #cc417a;
-    transition: all 0.1s;
-    border: 2px solid #333;
-    font-family: var(--font-heading);
-    margin: 10px 0;
+  display: inline-block;
+  padding: 15px 30px;
+  background: #ffec00;
+  color: #333;
+  font-size: 1.2rem;
+  font-weight: 800;
+  text-decoration: none;
+  border-radius: 50px;
+  box-shadow: 0 5px 0 #cc417a;
+  transition: all 0.1s;
+  border: 2px solid #333;
+  font-family: var(--font-heading);
+  margin: 10px 0;
 }
 
 .btn-large:active {
-    transform: translateY(3px);
-    box-shadow: 0 2px 0 #cc417a;
+  transform: translateY(3px);
+  box-shadow: 0 2px 0 #cc417a;
 }
 
 .bingo-link-btn .icon {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .center-text {
-    text-align: center;
+  text-align: center;
 }
 
 .mt-20 {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .mt-10 {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 .btn-style {
-    display: inline-block;
-    background: #eee;
-    padding: 5px 10px;
-    border-radius: 4px;
-    color: #333;
-    text-decoration: none;
-    font-size: 0.8rem;
-    margin-top: 5px;
+  display: inline-block;
+  background: #eee;
+  padding: 5px 10px;
+  border-radius: 4px;
+  color: #333;
+  text-decoration: none;
+  font-size: 0.8rem;
+  margin-top: 5px;
 }
 
 /* Ramen Shop Link Buttons */
 .shop-link-btn {
-    display: inline-block;
-    background: #fff;
-    color: var(--primary-color);
-    padding: 8px 12px;
-    border-radius: 20px;
-    text-decoration: none;
-    font-weight: bold;
-    border: 2px solid var(--primary-color);
-    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
-    transition: transform 0.1s, box-shadow 0.1s;
-    font-size: 0.95rem;
-    margin-right: 5px;
+  display: inline-block;
+  background: #fff;
+  color: var(--primary-color);
+  padding: 8px 12px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid var(--primary-color);
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+  transition: transform 0.1s, box-shadow 0.1s;
+  font-size: 0.95rem;
+  margin-right: 5px;
 }
 
 .shop-link-btn:active {
-    transform: translateY(2px);
-    box-shadow: none;
+  transform: translateY(2px);
+  box-shadow: none;
 }
 
 .shop-link-btn .small-icon {
-    font-size: 0.8em;
-    margin-left: 4px;
-}    /* 各日の背景 */
-    .day-section {
-      position: relative;
-      padding: 30px 20px 50px;
-    }
+  font-size: 0.8em;
+  margin-left: 4px;
+}
 
-    .day-section::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-image: 
-        radial-gradient(rgba(255,159,28,0.4) 1px, transparent 1px),
-        radial-gradient(rgba(255,82,153,0.3) 1px, transparent 1px);
-      background-size: 20px 20px;
-      background-position: 0 0, 10px 10px;
-      pointer-events: none;
-      z-index: 0;
-    }
+/* 各日の背景 */
+.day-section {
+  position: relative;
+  padding: 30px 20px 50px;
+}
 
-    /* Day 1: 別府 - 温泉っぽい青〜夜 */
-    .day-1 {
-      background: linear-gradient(180deg, 
-        #FFE4B5 0%,
-        #87CEEB 12%,
-        #B0E0E6 25%,
-        #87CEEB 40%,
-        #FFB347 55%,
-        #FF7F50 65%,
-        #DE6FA1 75%,
-        #2C3E50 88%,
-        #1a1a2e 100%
-      );
-    }
+.day-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    radial-gradient(rgba(255, 159, 28, 0.4) 1px, transparent 1px),
+    radial-gradient(rgba(255, 82, 153, 0.3) 1px, transparent 1px);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+  pointer-events: none;
+  z-index: 0;
+}
 
-    /* Day 2: 太宰府〜博多 - 緑〜夜 */
-    .day-2 {
-      background: linear-gradient(180deg, 
-        #FFECD2 0%,
-        #A8E6CF 15%,
-        #88D8B0 30%,
-        #7EC8E3 45%,
-        #FFB347 60%,
-        #FF6B6B 75%,
-        #2C3E50 90%,
-        #1a1a2e 100%
-      );
-    }
+/* Day 1: 別府 - 温泉っぽい青〜夜 */
+.day-1 {
+  background: linear-gradient(180deg,
+      #FFE4B5 0%,
+      #87CEEB 12%,
+      #B0E0E6 25%,
+      #87CEEB 40%,
+      #FFB347 55%,
+      #FF7F50 65%,
+      #DE6FA1 75%,
+      #2C3E50 88%,
+      #1a1a2e 100%);
+}
 
-    /* Day 3: 博多〜帰宅 - 朝〜昼 */
-    .day-3 {
-      background: linear-gradient(180deg, 
-        #FFECD2 0%,
-        #FFE4B5 20%,
-        #87CEEB 50%,
-        #B0E0E6 80%,
-        #87CEEB 100%
-      );
-    }
+/* Day 2: 太宰府〜博多 - 緑〜夜 */
+.day-2 {
+  background: linear-gradient(180deg,
+      #FFECD2 0%,
+      #A8E6CF 15%,
+      #88D8B0 30%,
+      #7EC8E3 45%,
+      #FFB347 60%,
+      #FF6B6B 75%,
+      #2C3E50 90%,
+      #1a1a2e 100%);
+}
 
-    .container {
-      max-width: 500px;
-      margin: 0 auto;
-      position: relative;
-      z-index: 1;
-    }
+/* Day 3: 博多〜帰宅 - 朝〜昼 */
+.day-3 {
+  background: linear-gradient(180deg,
+      #FFECD2 0%,
+      #FFE4B5 20%,
+      #87CEEB 50%,
+      #B0E0E6 80%,
+      #87CEEB 100%);
+}
 
-    /* Day ヘッダー */
-    .day-header {
-      background: var(--primary-color);
-      color: #fff;
-      padding: 12px 24px;
-      display: inline-block;
-      transform: rotate(-1deg);
-      box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
-      margin-bottom: 24px;
-      font-size: 1.4rem;
-      font-family: var(--font-heading);
-      font-weight: 800;
-      position: relative;
-    }
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
 
-    .day-header small {
-      font-size: 0.7em;
-      font-weight: 500;
-      margin-left: 8px;
-    }
+/* Day ヘッダー */
+.day-header {
+  background: var(--primary-color);
+  color: #fff;
+  padding: 12px 24px;
+  display: inline-block;
+  transform: rotate(-1deg);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  margin-bottom: 24px;
+  font-size: 1.4rem;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  position: relative;
+}
 
-    .header-emoji {
-      position: absolute;
-      right: -25px;
-      top: -20px;
-      font-size: 2rem;
-      transform: rotate(15deg);
-      filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.2));
-      animation: emoji-bounce 2s ease-in-out infinite;
-    }
+.day-header small {
+  font-size: 0.7em;
+  font-weight: 500;
+  margin-left: 8px;
+}
 
-    @keyframes emoji-bounce {
-      0%, 100% { transform: rotate(15deg) translateY(0); }
-      50% { transform: rotate(15deg) translateY(-4px); }
-    }
+.header-emoji {
+  position: absolute;
+  right: -25px;
+  top: -20px;
+  font-size: 2rem;
+  transform: rotate(15deg);
+  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.2));
+  animation: emoji-bounce 2s ease-in-out infinite;
+}
 
-    /* タイムライン */
-    .timeline-new {
-      position: relative;
-      padding-left: 70px;
-    }
+@keyframes emoji-bounce {
 
-    .road-line {
-      position: absolute;
-      left: 28px;
-      top: 0;
-      bottom: 0;
-      width: 5px;
-      background: repeating-linear-gradient(
-        to bottom,
-        var(--secondary-color) 0px,
-        var(--secondary-color) 10px,
-        transparent 10px,
-        transparent 20px
-      );
-      border-radius: 3px;
-      box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
-    }
+  0%,
+  100% {
+    transform: rotate(15deg) translateY(0);
+  }
 
-    /* イベントカード */
-    .event-new {
-      position: relative;
-      margin-bottom: 28px;
-    }
+  50% {
+    transform: rotate(15deg) translateY(-4px);
+  }
+}
 
-    .time-badge {
-      position: absolute;
-      left: -70px;
-      top: 16px;
-      width: 50px;
-      height: 50px;
-      background: white;
-      border-radius: 50%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      font-weight: 800;
-      font-size: 0.8rem;
-      font-family: var(--font-heading);
-      color: var(--text-color);
-      box-shadow: 2px 2px 6px rgba(0,0,0,0.15);
-      border: 3px solid var(--secondary-color);
-      line-height: 1.1;
-      z-index: 5;
-    }
+/* タイムライン */
+.timeline-new {
+  position: relative;
+  padding-left: 70px;
+}
 
-    .time-badge .icon {
-      font-size: 1rem;
-      margin-bottom: 1px;
-    }
+.road-line {
+  position: absolute;
+  left: 28px;
+  top: 0;
+  bottom: 0;
+  width: 5px;
+  background: repeating-linear-gradient(to bottom,
+      var(--secondary-color) 0px,
+      var(--secondary-color) 10px,
+      transparent 10px,
+      transparent 20px);
+  border-radius: 3px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
 
-    /* カード本体 */
-    .event-card {
-      background: var(--card-bg);
-      border-radius: 12px;
-      box-shadow: 4px 4px 0 rgba(0,0,0,0.1);
-      position: relative;
-      display: flex;
-      min-height: 120px;
-      overflow: visible;
-    }
+/* イベントカード */
+.event-new {
+  position: relative;
+  margin-bottom: 28px;
+}
 
-    .event-card.tilted-right { transform: rotate(0.6deg); }
-    .event-card.tilted-left { transform: rotate(-0.5deg); }
+.time-badge {
+  position: absolute;
+  left: -70px;
+  top: 16px;
+  width: 50px;
+  height: 50px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.8rem;
+  font-family: var(--font-heading);
+  color: var(--text-color);
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15);
+  border: 3px solid var(--secondary-color);
+  line-height: 1.1;
+  z-index: 5;
+}
 
-    .card-content {
-      flex: 1;
-      padding: 14px 16px;
-      position: relative;
-      z-index: 2;
-    }
+.time-badge .icon {
+  font-size: 1rem;
+  margin-bottom: 1px;
+}
 
-    .card-photo {
-      width: 42%;
-      min-width: 120px;
-      position: relative;
-      background: linear-gradient(135deg, #e8e8e8, #d0d0d0);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #999;
-      font-size: 0.75rem;
-      text-align: center;
-      border-radius: 0 12px 12px 0;
-      overflow: hidden;
-    }
+/* カード本体 */
+.event-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+  position: relative;
+  display: flex;
+  min-height: 120px;
+  overflow: visible;
+}
 
-    .card-photo::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0;
-      bottom: 0;
-      width: 40px;
-      background: linear-gradient(to right, var(--card-bg) 0%, transparent 100%);
-      z-index: 1;
-    }
+.event-card.tilted-right {
+  transform: rotate(0.6deg);
+}
 
-    .event-title {
-      font-size: 1rem;
-      font-weight: 800;
-      font-family: var(--font-heading);
-      color: var(--primary-color);
-      margin-bottom: 4px;
-      line-height: 1.3;
-    }
+.event-card.tilted-left {
+  transform: rotate(-0.5deg);
+}
 
-    .event-note {
-      font-family: var(--font-hand);
-      font-size: 0.95rem;
-      color: var(--text-color);
-      margin-top: 6px;
-    }
+.card-content {
+  flex: 1;
+  padding: 14px 16px;
+  position: relative;
+  z-index: 2;
+}
 
-    .event-link {
-      display: inline-block;
-      margin-top: 6px;
-      background: var(--accent-color);
-      color: #fff;
-      padding: 3px 10px;
-      border-radius: 12px;
-      font-size: 0.7rem;
-      text-decoration: none;
-      font-weight: bold;
-    }
+.card-photo {
+  width: 42%;
+  min-width: 120px;
+  position: relative;
+  background: linear-gradient(135deg, #e8e8e8, #d0d0d0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  font-size: 0.75rem;
+  text-align: center;
+  border-radius: 0 12px 12px 0;
+  overflow: hidden;
+}
 
-    /* マスキングテープ */
-    .masking-tape {
-      position: absolute;
-      width: 60px;
-      height: 20px;
-      opacity: 0.75;
-      z-index: 15;
-    }
+.card-photo::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 40px;
+  background: linear-gradient(to right, var(--card-bg) 0%, transparent 100%);
+  z-index: 1;
+}
 
-    .masking-tape.top-left {
-      top: -10px;
-      left: 15px;
-      transform: rotate(-12deg);
-      background: var(--masking-tape-green);
-    }
+.event-title {
+  font-size: 1rem;
+  font-weight: 800;
+  font-family: var(--font-heading);
+  color: var(--primary-color);
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
 
-    .masking-tape.top-right {
-      top: -8px;
-      right: 20px;
-      transform: rotate(10deg);
-      background: var(--masking-tape-pink);
-    }
+.event-note {
+  font-family: var(--font-hand);
+  font-size: 0.95rem;
+  color: var(--text-color);
+  margin-top: 6px;
+}
 
-    .masking-tape.bottom-right {
-      bottom: -8px;
-      right: 25px;
-      transform: rotate(-5deg);
-      background: var(--masking-tape-yellow);
-    }
+.event-link {
+  display: inline-block;
+  margin-top: 6px;
+  background: var(--accent-color);
+  color: #fff;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-    /* キャラひょっこり */
-    .peek-chara {
-      position: absolute;
-      font-size: 1.8rem;
-      z-index: 20;
-      filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.15));
-    }
+/* マスキングテープ */
+.masking-tape {
+  position: absolute;
+  width: 60px;
+  height: 20px;
+  opacity: 0.75;
+  z-index: 15;
+}
 
-    .peek-chara.top-right {
-      top: -15px;
-      right: -10px;
-      transform: rotate(10deg);
-    }
+.masking-tape.top-left {
+  top: -10px;
+  left: 15px;
+  transform: rotate(-12deg);
+  background: var(--masking-tape-green);
+}
 
-    .peek-chara.bottom-left {
-      bottom: -10px;
-      left: -10px;
-      transform: rotate(-10deg);
-    }
+.masking-tape.top-right {
+  top: -8px;
+  right: 20px;
+  transform: rotate(10deg);
+  background: var(--masking-tape-pink);
+}
 
-    /* 集合時間 */
-    .group-times {
-      display: flex;
-      flex-direction: column;
-      gap: 3px;
-      font-size: 0.8rem;
-      margin-top: 6px;
-    }
+.masking-tape.bottom-right {
+  bottom: -8px;
+  right: 25px;
+  transform: rotate(-5deg);
+  background: var(--masking-tape-yellow);
+}
 
-    .group-times span {
-      background: #FFF9E6;
-      padding: 3px 8px;
-      border-radius: 4px;
-      display: inline-block;
-      width: fit-content;
-    }
+/* キャラひょっこり */
+.peek-chara {
+  position: absolute;
+  font-size: 1.8rem;
+  z-index: 20;
+  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.15));
+}
 
-    /* バスカード */
-    .event-card.bus-style {
-      background: linear-gradient(135deg, #E8F6FF, #D0ECFF);
-    }
-    .event-card.bus-style .card-photo::before {
-      background: linear-gradient(to right, #E8F6FF 0%, transparent 100%);
-    }
+.peek-chara.top-right {
+  top: -15px;
+  right: -10px;
+  transform: rotate(10deg);
+}
 
-    .bus-route {
-      font-weight: 800;
-      font-size: 0.95rem;
-      font-family: var(--font-heading);
-      color: #2980B9;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
+.peek-chara.bottom-left {
+  bottom: -10px;
+  left: -10px;
+  transform: rotate(-10deg);
+}
 
-    /* ランチカード */
-    .event-card.lunch-style {
-      background: linear-gradient(135deg, #FFF8E7, #FFEDCC);
-    }
-    .event-card.lunch-style .card-photo::before {
-      background: linear-gradient(to right, #FFF8E7 0%, transparent 100%);
-    }
-    .event-card.lunch-style .event-title {
-      color: #D35400;
-    }
+/* 集合時間 */
+.group-times {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  font-size: 0.8rem;
+  margin-top: 6px;
+}
 
-    .lunch-place {
-      background: var(--primary-color);
-      color: white;
-      padding: 2px 10px;
-      border-radius: 12px;
-      font-size: 0.7rem;
-      display: inline-block;
-      margin-top: 4px;
-    }
+.group-times span {
+  background: #FFF9E6;
+  padding: 3px 8px;
+  border-radius: 4px;
+  display: inline-block;
+  width: fit-content;
+}
 
-    /* 宴会・パーティカード */
-    .event-card.party-style {
-      background: linear-gradient(135deg, #FFF0F5, #FFE4EC);
-      border: 2px solid var(--primary-color);
-    }
-    .event-card.party-style .card-photo::before {
-      background: linear-gradient(to right, #FFF0F5 0%, transparent 100%);
-    }
+/* バスカード */
+.event-card.bus-style {
+  background: linear-gradient(135deg, #E8F6FF, #D0ECFF);
+}
 
-    /* 夜カード */
-    .event-card.night-style {
-      background: linear-gradient(135deg, #2d2d44, #3d3d5c);
-      border: 2px solid var(--secondary-color);
-    }
-    .event-card.night-style .card-photo {
-      background: linear-gradient(135deg, #3d3d5c, #2d2d44);
-    }
-    .event-card.night-style .card-photo::before {
-      background: linear-gradient(to right, #2d2d44 0%, transparent 100%);
-    }
-    .event-card.night-style .event-title {
-      color: #ffec00;
-    }
-    .event-card.night-style .event-note {
-      color: rgba(255,255,255,0.85);
-    }
+.event-card.bus-style .card-photo::before {
+  background: linear-gradient(to right, #E8F6FF 0%, transparent 100%);
+}
 
-    /* ホテルカード */
-    .event-card.hotel-style {
-      background: linear-gradient(135deg, #E8F8F5, #D1F2EB);
-      border: 2px solid #1ABC9C;
-    }
-    .event-card.hotel-style .card-photo::before {
-      background: linear-gradient(to right, #E8F8F5 0%, transparent 100%);
-    }
-    .event-card.hotel-style .event-title {
-      color: #1ABC9C;
-    }
+.bus-route {
+  font-weight: 800;
+  font-size: 0.95rem;
+  font-family: var(--font-heading);
+  color: #2980B9;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
 
-    /* 自由時間カード */
-    .event-card.free-style {
-      background: linear-gradient(135deg, #FCF3CF, #F9E79F);
-      border: 2px dashed #F39C12;
-    }
-    .event-card.free-style .card-photo::before {
-      background: linear-gradient(to right, #FCF3CF 0%, transparent 100%);
-    }
-    .event-card.free-style .event-title {
-      color: #D68910;
-    }
+/* ランチカード */
+.event-card.lunch-style {
+  background: linear-gradient(135deg, #FFF8E7, #FFEDCC);
+}
 
-    /* チーム分け */
-    .team-split-card {
-      background: white;
-      border-radius: 12px;
-      padding: 16px;
-      box-shadow: 4px 4px 0 rgba(0,0,0,0.1);
-      position: relative;
-      border: 2px dashed var(--accent-color);
-      overflow: visible;
-    }
+.event-card.lunch-style .card-photo::before {
+  background: linear-gradient(to right, #FFF8E7 0%, transparent 100%);
+}
 
-    .team-split-header {
-      font-family: var(--font-heading);
-      font-weight: 800;
-      font-size: 1rem;
-      color: var(--accent-color);
-      margin-bottom: 12px;
-      text-align: center;
-    }
+.event-card.lunch-style .event-title {
+  color: #D35400;
+}
 
-    .team-columns {
-      display: flex;
-      gap: 12px;
-    }
+.lunch-place {
+  background: var(--primary-color);
+  color: white;
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  display: inline-block;
+  margin-top: 4px;
+}
 
-    .team-column {
-      flex: 1;
-      background: #f8f9fa;
-      border-radius: 10px;
-      padding: 12px;
-      position: relative;
-    }
+/* 宴会・パーティカード */
+.event-card.party-style {
+  background: linear-gradient(135deg, #FFF0F5, #FFE4EC);
+  border: 2px solid var(--primary-color);
+}
 
-    .team-column.team-a {
-      background: linear-gradient(135deg, #E8F6FF, #D4ECFB);
-    }
+.event-card.party-style .card-photo::before {
+  background: linear-gradient(to right, #FFF0F5 0%, transparent 100%);
+}
 
-    .team-column.team-b {
-      background: linear-gradient(135deg, #FFF0F5, #FFE4EC);
-    }
+/* 夜カード */
+.event-card.night-style {
+  background: linear-gradient(135deg, #2d2d44, #3d3d5c);
+  border: 2px solid var(--secondary-color);
+}
 
-    .team-name {
-      font-family: var(--font-heading);
-      font-weight: 800;
-      font-size: 0.85rem;
-      margin-bottom: 8px;
-      padding-bottom: 6px;
-      border-bottom: 2px dotted rgba(0,0,0,0.1);
-    }
+.event-card.night-style .card-photo {
+  background: linear-gradient(135deg, #3d3d5c, #2d2d44);
+}
 
-    .team-a .team-name { color: #2980B9; }
-    .team-b .team-name { color: var(--primary-color); }
+.event-card.night-style .card-photo::before {
+  background: linear-gradient(to right, #2d2d44 0%, transparent 100%);
+}
 
-    .team-schedule {
-      font-size: 0.8rem;
-      line-height: 1.7;
-    }
+.event-card.night-style .event-title {
+  color: #ffec00;
+}
 
-    .team-schedule li {
-      list-style: none;
-      position: relative;
-      padding-left: 16px;
-      margin-bottom: 4px;
-    }
+.event-card.night-style .event-note {
+  color: rgba(255, 255, 255, 0.85);
+}
 
-    .team-schedule li::before {
-      content: '▸';
-      position: absolute;
-      left: 0;
-      color: var(--secondary-color);
-    }
+/* ホテルカード */
+.event-card.hotel-style {
+  background: linear-gradient(135deg, #E8F8F5, #D1F2EB);
+  border: 2px solid #1ABC9C;
+}
 
-    .team-emoji {
-      position: absolute;
-      top: -12px;
-      right: -8px;
-      font-size: 1.5rem;
-      transform: rotate(10deg);
-    }
+.event-card.hotel-style .card-photo::before {
+  background: linear-gradient(to right, #E8F8F5 0%, transparent 100%);
+}
 
-    /* フッター */
-    .day-footer {
-      text-align: center;
-      margin-top: 30px;
-      padding-bottom: 10px;
-      font-family: var(--font-hand);
-      font-size: 1.2rem;
-    }
+.event-card.hotel-style .event-title {
+  color: #1ABC9C;
+}
 
-    .day-1 .day-footer { color: #fff; text-shadow: 1px 1px 3px rgba(0,0,0,0.3); }
-    .day-2 .day-footer { color: #fff; text-shadow: 1px 1px 3px rgba(0,0,0,0.3); }
-    .day-3 .day-footer { color: var(--text-color); }
+/* 自由時間カード */
+.event-card.free-style {
+  background: linear-gradient(135deg, #FCF3CF, #F9E79F);
+  border: 2px dashed #F39C12;
+}
 
-    /* レスポンシブ */
-    @media (max-width: 420px) {
-      .timeline-new { padding-left: 58px; }
-      .time-badge {
-        width: 44px;
-        height: 44px;
-        font-size: 0.7rem;
-        left: -58px;
-      }
-      .road-line { left: 24px; }
-      .card-photo { width: 38%; min-width: 100px; }
-      .team-columns { flex-direction: column; }
-    }
+.event-card.free-style .card-photo::before {
+  background: linear-gradient(to right, #FCF3CF 0%, transparent 100%);
+}
+
+.event-card.free-style .event-title {
+  color: #D68910;
+}
+
+/* チーム分け */
+.team-split-card {
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+  position: relative;
+  border: 2px dashed var(--accent-color);
+  overflow: visible;
+}
+
+.team-split-header {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1rem;
+  color: var(--accent-color);
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.team-columns {
+  display: flex;
+  gap: 12px;
+}
+
+.team-column {
+  flex: 1;
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 12px;
+  position: relative;
+}
+
+.team-column.team-a {
+  background: linear-gradient(135deg, #E8F6FF, #D4ECFB);
+}
+
+.team-column.team-b {
+  background: linear-gradient(135deg, #FFF0F5, #FFE4EC);
+}
+
+.team-name {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+  padding-bottom: 6px;
+  border-bottom: 2px dotted rgba(0, 0, 0, 0.1);
+}
+
+.team-a .team-name {
+  color: #2980B9;
+}
+
+.team-b .team-name {
+  color: var(--primary-color);
+}
+
+.team-schedule {
+  font-size: 0.8rem;
+  line-height: 1.7;
+}
+
+.team-schedule li {
+  list-style: none;
+  position: relative;
+  padding-left: 16px;
+  margin-bottom: 4px;
+}
+
+.team-schedule li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--secondary-color);
+}
+
+.team-emoji {
+  position: absolute;
+  top: -12px;
+  right: -8px;
+  font-size: 1.5rem;
+  transform: rotate(10deg);
+}
+
+/* フッター */
+.day-footer {
+  text-align: center;
+  margin-top: 30px;
+  padding-bottom: 10px;
+  font-family: var(--font-hand);
+  font-size: 1.2rem;
+}
+
+.day-1 .day-footer {
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.day-2 .day-footer {
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.day-3 .day-footer {
+  color: var(--text-color);
+}
+
+/* レスポンシブ */
+@media (max-width: 420px) {
+  .timeline-new {
+    padding-left: 58px;
+  }
+
+  .time-badge {
+    width: 44px;
+    height: 44px;
+    font-size: 0.7rem;
+    left: -58px;
+  }
+
+  .road-line {
+    left: 24px;
+  }
+
+  .card-photo {
+    width: 38%;
+    min-width: 100px;
+  }
+
+  .team-columns {
+    flex-direction: column;
+  }
+}
+/* Highlight Flash Effect */
+@keyframes flash-yellow {
+    0%, 100% { background-color: transparent; }
+    50% { background-color: #fff9c4; transform: scale(1.02); box-shadow: 0 0 15px rgba(255, 249, 196, 0.8); }
+}
+
+.highlight-flash {
+    animation: flash-yellow 1.5s ease-in-out;
+    z-index: 10; /* Ensure it pops out */
+    position: relative; /* Ensure z-index works */
+}

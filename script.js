@@ -91,12 +91,10 @@ function jumpToCurrentEvent() {
         });
 
         // Flash effect to highlight
-        targetElement.style.transition = "background 0.5s";
-        let originalBg = targetElement.style.background;
-        targetElement.style.background = "#fff9c4"; // Yellow highlight
+        targetElement.classList.add('highlight-flash');
         setTimeout(() => {
-            targetElement.style.background = originalBg;
-        }, 1000);
+            targetElement.classList.remove('highlight-flash');
+        }, 1500);
 
     } else {
         alert("現在の予定が見つかりませんでした（ツアー終了か開始前です）");
