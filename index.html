@@ -2,374 +2,698 @@
 <html lang="ja">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2026年 社員旅行 in 九州</title>
-    <link rel="stylesheet" href="style.css">
-    <meta name="theme-color" content="#ff5299">
-    <!-- Google Fonts -->
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;800&family=Yomogi&display=swap');
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2026年 社員旅行 in 九州</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style_overview.css">
+  <link rel="stylesheet" href="style_timeline.css">
+  <link rel="stylesheet" href="style_bingo.css">
+  <link rel="stylesheet" href="style_info.css">
+  <meta name="theme-color" content="#ff5299">
+  <!-- Google Fonts -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;800&family=Yomogi&display=swap');
+  </style>
 </head>
 
 <body>
 
-    <!-- Floating 'Next Where?' Button -->
-    <button id="next-where-btn" class="next-where-btn initial-anim">
-        <span class="icon">🤔</span>
-        <span class="text">次どこ？</span>
-    </button>
+  <!-- Floating 'Next Where?' Button -->
+  <button id="next-where-btn" class="next-where-btn initial-anim">
+    <span class="icon">🤔</span>
+    <span class="text">次どこ？</span>
+  </button>
 
-    <!-- 1. トップ／概要 -->
-    <header class="hero-section" id="top">
-        <div class="hero-image-container">
-            <img src="images/top_visual_fixed.png?v=4" alt="2026旅特集 ぴあいえふ PIF official Tour in 別府&博多" class="hero-img">
+  <!-- 1. トップ／概要 -->
+  <header class="hero-section" id="top">
+    <div class="hero-image-container">
+      <img src="images/top_visual_fixed.png?v=4" alt="2026旅特集 ぴあいえふ PIF official Tour in 別府&博多" class="hero-img">
+    </div>
+  </header>
+
+  <nav class="sticky-nav">
+    <ul>
+      <li><a href="#schedule">SCHEDULE</a></li>
+      <li><a href="#bingo">BINGO</a></li>
+      <li><a href="#hotel">HOTEL</a></li>
+      <li><a href="#info">INFO</a></li>
+    </ul>
+  </nav>
+
+  <main class="container magazine-layout">
+
+    <!-- 2. 全体スケジュール（俯瞰） -->
+    <!-- 2. 全体スケジュール（俯瞰） -->
+    <section id="schedule" class="section" style="background: none; padding: 0;">
+      <div class="section-header">
+        <img src="images/sched.png" alt="" class="section-icon">
+        <h2 class="section-title">全体スケジュール</h2>
+      </div>
+
+      <div class="schedule-overview">
+        <div class="day-mini-card">
+          <div class="masking-tape"></div>
+          <span class="day-badge-mini">Day 1</span>
+          <div class="day-date">2/4 (水)</div>
+          <div class="day-theme">別府地獄めぐり<br>& 大宴会 🍻</div>
+          <a href="#day1-detail" class="detail-link-mini">詳細へ →</a>
+          <span class="day-emoji">👹</span>
         </div>
-    </header>
 
-    <nav class="sticky-nav">
-        <ul>
-            <li><a href="#schedule">SCHEDULE</a></li>
-            <li><a href="#bingo">BINGO</a></li>
-            <li><a href="#hotel">HOTEL</a></li>
-            <li><a href="#info">INFO</a></li>
-        </ul>
-    </nav>
+        <div class="day-mini-card">
+          <div class="masking-tape"></div>
+          <span class="day-badge-mini">Day 2</span>
+          <div class="day-date">2/5 (木)</div>
+          <div class="day-theme">太宰府<br>& 博多ナイト 🐔</div>
+          <a href="#day2-detail" class="detail-link-mini">詳細へ →</a>
+          <span class="day-emoji">⛩️</span>
+        </div>
 
-    <main class="container magazine-layout">
+        <div class="day-mini-card">
+          <div class="masking-tape"></div>
+          <span class="day-badge-mini">Day 3</span>
+          <div class="day-date">2/6 (金)</div>
+          <div class="day-theme">博多自由観光<br>& 帰宅 ✈️</div>
+          <a href="#day3-detail" class="detail-link-mini">詳細へ →</a>
+          <span class="day-emoji">🍜</span>
+        </div>
+      </div>
+    </section>
 
-        <!-- 2. 全体スケジュール（俯瞰） -->
-        <section id="schedule" class="section">
-            <h2 class="section-title tape-heading">全体スケジュール</h2>
-            <div class="overview-schedule">
-                <div class="day-card magazine-card rotate-left">
-                    <span class="day-badge">Day 1</span>
-                    <h3>2/4 (WED)</h3>
-                    <p class="main-event">別府地獄めぐり & 大宴会</p>
-                    <a href="#day1-detail" class="detail-link">詳細へ &gt;</a>
+    <!-- 3. 詳細タイムテーブル -->
+    <section id="timetable" class="section" style="background: none; padding: 0;">
+      <h2 class="section-title tape-heading">詳細タイムテーブル</h2>
+      <!-- ========== DAY 1 ========== -->
+      <div id="day1-detail" class="day-section day-1">
+        <div class="container">
+          <div class="day-header">
+            Day 1 <small>2/4(水) 別府・地獄めぐり</small>
+            <span class="header-emoji">👹</span>
+          </div>
+
+          <div class="timeline-new">
+            <div class="road-line"></div>
+
+            <!-- 07:00 空港移動 -->
+            <div class="event-new">
+              <div class="time-badge">
+                <span class="icon">✈️</span>
+                07:00
+              </div>
+              <div class="event-card tilted-right">
+                <div class="masking-tape top-left"></div>
+                <div class="masking-tape top-right"></div>
+                <div class="card-content">
+                  <div class="event-title">各自、大分空港へ移動</div>
+                  <div class="group-times">
+                    <span>🛫 大阪組 8:10着</span>
+                    <span>🛬 東京組 9:45着</span>
+                  </div>
+                  <div class="event-note">遅れないようにね！💨</div>
                 </div>
-                <div class="day-card magazine-card rotate-right">
-                    <span class="day-badge">Day 2</span>
-                    <h3>2/5 (THU)</h3>
-                    <p class="main-event">太宰府 & 博多ナイト</p>
-                    <a href="#day2-detail" class="detail-link">詳細へ &gt;</a>
+                <div class="card-photo">📷 空港</div>
+                <span class="peek-chara top-right">🧳</span>
+              </div>
+            </div>
+
+            <!-- 10:00 バス移動 -->
+            <div class="event-new">
+              <div class="time-badge">
+                <span class="icon">🚌</span>
+                10:00
+              </div>
+              <div class="event-card bus-style tilted-left">
+                <div class="masking-tape top-left" style="background: var(--masking-tape-blue);"></div>
+                <div class="card-content">
+                  <div class="event-title" style="color: #2980B9;">【バス移動】大分空港 → 別府温泉</div>
+                  <div class="event-note">全員集合！🎒</div>
                 </div>
-                <div class="day-card magazine-card rotate-left">
-                    <span class="day-badge">Day 3</span>
-                    <h3>2/6 (FRI)</h3>
-                    <p class="main-event">博多自由観光</p>
-                    <a href="#day3-detail" class="detail-link">詳細へ &gt;</a>
+                <div class="card-photo">📷 バス</div>
+                <span class="peek-chara bottom-left">🚌</span>
+              </div>
+            </div>
+
+            <!-- 11:30 ランチ -->
+            <div class="event-new">
+              <div class="time-badge">
+                <span class="icon">😋</span>
+                11:30
+              </div>
+              <div class="event-card lunch-style tilted-right">
+                <div class="masking-tape top-left" style="background: var(--masking-tape-pink);"></div>
+                <div class="masking-tape top-right" style="background: var(--masking-tape-green);"></div>
+                <div class="card-content">
+                  <div class="event-title">みんなでランチ「地獄蒸し！」🍳</div>
+                  <span class="lunch-place">地熱観光ラボ縁間</span>
+                  <a href="https://enma-ch.com/" target="_blank" class="event-link">公式サイト →</a>
                 </div>
-            </div>
-        </section>
-
-        <!-- 3. 詳細タイムテーブル -->
-        <section id="timetable" class="section">
-            <h2 class="section-title tape-heading">詳細タイムテーブル</h2>
-
-            <!-- Day 0 (Test) - Commented out as requested -->
-            <!--
-            <div id="day0-detail" class="day-detail magazine-paper"
-                style="border: 2px dashed red; background: #fff8f8;">
-                <h3 class="day-header" style="background:deeppink;">Day 0 <small>12/25(木) テスト</small></h3>
-                <ul class="timeline">
-                    <li class="event move">
-                        <span class="time">09:00</span>
-                        <div class="content">
-                            <h4>OZU出勤</h4>
-                            <p class="note">出勤時間帯</p>
-                        </div>
-                    </li>
-                    <li class="event activity">
-                        <span class="time">10:00</span>
-                        <div class="content">
-                            <h4>社員旅行MTG</h4>
-                            <p class="note">Next Whereボタンのテスト！</p>
-                        </div>
-                    </li>
-                    <li class="event free">
-                        <span class="time">11:00</span>
-                        <div class="content">
-                            <h4>お腹空いてくる</h4>
-                            <p class="note">ランチの準備</p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            -->
-
-            <!-- Day 1 -->
-            <div id="day1-detail" class="day-detail magazine-paper">
-                <h3 class="day-header">Day 1 <small>2/4(水) 別府・地獄めぐり</small></h3>
-                <ul class="timeline">
-                    <li class="event move">
-                        <span class="time">07:00</span>
-                        <div class="content">
-                            <h4>各自、大分空港へ移動</h4>
-                            <p class="note">大阪組 8:10着 / 東京組 9:45着</p>
-                        </div>
-                    </li>
-                    <li class="event move">
-                        <span class="time">10:00</span>
-                        <div class="content">
-                            <h4>【バス移動】大分空港 → 別府温泉</h4>
-                            <p class="note">全員集合！</p>
-                        </div>
-                    </li>
-                    <li class="event meal">
-                        <span class="time">11:30</span>
-                        <div class="content">
-                            <h4>みんなでランチ「地獄蒸し！」</h4>
-                            <div class="note">
-                                <a href="https://enma-ch.com/" target="_blank" class="detail-link"
-                                    style="margin-top:0;">地熱観光ラボ縁間</a>
-                            </div>
-                        </div>
-                    </li>
-
-                    <!-- Split Team Section -->
-                    <li class="event activity"
-                        style="background:#f0f8ff; padding:10px; border-radius:10px; border:2px dashed #acd6ff;">
-                        <span class="time">午後</span>
-                        <div class="content">
-                            <h4 style="color:#0066cc;">二手に分かれます！</h4>
-
-                            <div style="margin-bottom:15px;">
-                                <strong>●山口、遠山、迫田チーム</strong>
-                                <ul style="margin-left:20px; font-size:0.9em;">
-                                    <li>13:30 砂風呂開始！（13:15入店）</li>
-                                    <li>14:00 地獄めぐり ♨️</li>
-                                    <li>15:30 集合してホテルへ！</li>
-                                </ul>
-                            </div>
-
-                            <div>
-                                <strong>●高杉、木村、市倉チーム</strong>
-                                <ul style="margin-left:20px; font-size:0.9em;">
-                                    <li>13:15 地獄めぐり ♨️</li>
-                                    <li>14:30 集合して砂風呂へ！</li>
-                                    <li>15:00 砂風呂開始！(14:45入店)</li>
-                                    <li>15:30 集合してホテルへ！</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="event hotel">
-                        <span class="time">16:00</span>
-                        <div class="content">
-                            <h4>ホテルチェックイン</h4>
-                            <p class="note">ホテル別府パストラル</p>
-                        </div>
-                    </li>
-                    <li class="event free">
-                        <span class="time">16:30</span>
-                        <div class="content">
-                            <h4>自由時間</h4>
-                        </div>
-                    </li>
-                    <li class="event party">
-                        <span class="time">18:00</span>
-                        <div class="content">
-                            <h4>【大宴会】ごちそうをいただきます！！</h4>
-                        </div>
-                    </li>
-                    <li class="event party">
-                        <span class="time">20:00</span>
-                        <div class="content">
-                            <h4>【二次会】2次会も楽しもう！</h4>
-                        </div>
-                    </li>
-                    <li class="event free">
-                        <span class="time">23:00</span>
-                        <div class="content">
-                            <h4>自由時間</h4>
-                        </div>
-                    </li>
-                </ul>
+                <div class="card-photo">📷 地獄蒸し</div>
+                <span class="peek-chara top-right">♨️</span>
+              </div>
             </div>
 
-            <!-- Day 2 -->
-            <div id="day2-detail" class="day-detail magazine-paper">
-                <h3 class="day-header">Day 2 <small>2/5(木) 太宰府・博多</small></h3>
-                <ul class="timeline">
-                    <li class="event meal">
-                        <span class="time">07:30</span>
-                        <div class="content">
-                            <h4>朝食！</h4>
-                        </div>
-                    </li>
-                    <li class="event move">
-                        <span class="time">09:00</span>
-                        <div class="content">
-                            <h4>ロビー集合</h4>
-                        </div>
-                    </li>
-                    <li class="event move">
-                        <span class="time">09:30</span>
-                        <div class="content">
-                            <h4>【移動】別府 → 太宰府</h4>
-                        </div>
-                    </li>
-                    <li class="event meal">
-                        <span class="time">12:00</span>
-                        <div class="content">
-                            <h4>【ランチ】太宰府</h4>
-                        </div>
-                    </li>
-                    <li class="event free">
-                        <span class="time">14:00</span>
-                        <div class="content">
-                            <h4>自由時間！</h4>
-                            <p class="note">レンタカー手配してます！（トヨタレンタカー博多駅前）</p>
-                        </div>
-                    </li>
-                    <li class="event hotel">
-                        <span class="time">18:00</span>
-                        <div class="content">
-                            <h4>ホテルチェックイン</h4>
-                            <p class="note">ホテルルートイン博多駅 -博多口-</p>
-                        </div>
-                    </li>
-                    <li class="event meal">
-                        <span class="time">19:00</span>
-                        <div class="content">
-                            <h4>【Dinner】ぢどり屋大和 別館</h4>
-                            <div class="note">
-                                <a href="https://tabelog.com/fukuoka/A4001/A400101/40001216/" target="_blank"
-                                    class="detail-link" style="margin-top:0;">食べログを見る</a><br>
-                                TEL: 050-5869-7116
-                            </div>
-                        </div>
-                    </li>
-                    <li class="event party">
-                        <span class="time">21:00</span>
-                        <div class="content">
-                            <h4>【Party】2軒目へGO！🎤🏓🍜</h4>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-
-            <!-- Day 3 -->
-            <div id="day3-detail" class="day-detail magazine-paper">
-                <h3 class="day-header">Day 3 <small>2/6(金) 博多・帰宅</small></h3>
-                <ul class="timeline">
-                    <li class="event move">
-                        <span class="time">09:45</span>
-                        <div class="content">
-                            <h4>ロビー集合＆チェックアウト</h4>
-                        </div>
-                    </li>
-                    <li class="event free">
-                        <span class="time">10:00</span>
-                        <div class="content">
-                            <h4>自由行動 & お土産購入</h4>
-                            <p class="note">博多駅・天神周辺</p>
-                        </div>
-                    </li>
-                    <li class="event meal">
-                        <span class="time">12:00</span>
-                        <div class="content">
-                            <h4>【各自でランチ】ラスト福岡飯</h4>
-                        </div>
-                    </li>
-                    <li class="event move">
-                        <span class="time">14:00</span>
-                        <div class="content">
-                            <h4>レンタカー返却</h4>
-                            <p class="note">福岡空港で返却</p>
-                        </div>
-                    </li>
-                    <li class="event move">
-                        <span class="time">14:30</span>
-                        <div class="content">
-                            <h4>空港集合</h4>
-                        </div>
-                    </li>
-                    <li class="event move">
-                        <span class="time">15:00</span>
-                        <div class="content">
-                            <h4>解散・フライト</h4>
-                            <p class="note">東京組 16:00発 / 大阪組 17:00発</p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Bingo Game Section (External Link) -->
-        <section id="bingo" class="section">
-            <h2 class="section-title tape-heading">MISSION BINGO</h2>
-            <div class="content-box magazine-paper" style="background:#fff0fa; text-align:center;">
-                <p>ビンゴ大会は専用アプリで開催！<br>
-                    下のボタンからアクセスして参加してください。</p>
-
-                <div class="mt-20">
-                    <a href="https://bingoapps.vercel.app/" target="_blank" class="btn-large bingo-link-btn">
-                        <span class="icon">🎯</span> ビンゴ会場へGO!
-                    </a>
+            <!-- 午後 チーム分け -->
+            <div class="event-new">
+              <div class="time-badge">
+                <span class="icon">👥</span>
+                午後
+              </div>
+              <div class="team-split-card">
+                <div class="masking-tape top-left" style="background: var(--masking-tape-yellow);"></div>
+                <div class="masking-tape top-right" style="background: var(--masking-tape-blue);"></div>
+                <div class="team-split-header">🔀 二手に分かれます！</div>
+                <div class="team-columns">
+                  <div class="team-column team-a">
+                    <span class="team-emoji">🏃</span>
+                    <div class="team-name">山口・遠山・迫田チーム</div>
+                    <ul class="team-schedule">
+                      <li>13:30 砂風呂開始！(13:15入店)</li>
+                      <li>14:00 地獄めぐり ♨️</li>
+                      <li>15:30 集合→ホテルへ</li>
+                    </ul>
+                  </div>
+                  <div class="team-column team-b">
+                    <span class="team-emoji">🏃‍♀️</span>
+                    <div class="team-name">高杉・木村・市倉チーム</div>
+                    <ul class="team-schedule">
+                      <li>13:15 地獄めぐり ♨️</li>
+                      <li>14:30 集合→砂風呂へ</li>
+                      <li>15:00 砂風呂開始！(14:45入店)</li>
+                      <li>15:30 集合→ホテルへ</li>
+                    </ul>
+                  </div>
                 </div>
-                <p class="note mt-10">※Googleアカウントでログインしてね</p>
+              </div>
             </div>
-        </section>
 
-        <!-- Useful Info -->
-        <section id="hotel" class="section">
-            <h2 class="section-title tape-heading">お役立ち情報</h2>
-
-            <div class="info-card magazine-card">
-                <h3>🏨 1日目: ホテル別府パストラル</h3>
-                <p class="address">別府市東荘園町1-4</p>
-                <div class="tel-box">
-                    <span>TEL</span> <a href="tel:0977234201">0977-23-4201</a>
+            <!-- 16:00 チェックイン -->
+            <div class="event-new">
+              <div class="time-badge">
+                <span class="icon">🏨</span>
+                16:00
+              </div>
+              <div class="event-card hotel-style tilted-left">
+                <div class="masking-tape top-left"></div>
+                <div class="card-content">
+                  <div class="event-title">ホテルチェックイン</div>
+                  <div class="event-note">ホテル別府パストラル 🛎️</div>
                 </div>
-                <a href="https://goo.gl/maps/placeholder_beppu" target="_blank" class="map-link btn-style">Maps</a>
+                <div class="card-photo">📷 ホテル</div>
+              </div>
             </div>
 
-            <div class="info-card magazine-card">
-                <h3>🏨 2日目: ホテルルートイン博多駅</h3>
-                <p class="address">福岡市博多区博多駅前1-1-20</p>
-                <div class="tel-box">
-                    <span>TEL</span> <a href="tel:0924778888">092-477-8888</a>
+            <!-- 16:30 自由時間 -->
+            <div class="event-new">
+              <div class="time-badge">
+                <span class="icon">🎯</span>
+                16:30
+              </div>
+              <div class="event-card free-style tilted-right">
+                <div class="masking-tape top-left" style="background: var(--masking-tape-yellow);"></div>
+                <div class="card-content">
+                  <div class="event-title">自由時間</div>
+                  <div class="event-note">ゆっくり準備しよう〜</div>
                 </div>
-                <a href="https://goo.gl/maps/placeholder_hakata" target="_blank" class="map-link btn-style">Maps</a>
+                <div class="card-photo">📷</div>
+              </div>
             </div>
 
-            <div class="info-card magazine-card">
-                <h3>🍜 おすすめラーメン（博多）</h3>
-                <ul class="check-items">
-                    <li style="display:block; margin-bottom:10px;">
-                        <a href="https://www.hakata-shinshin.com/" target="_blank" class="shop-link-btn">ShinShin<span
-                                class="small-icon">🔗</span></a>
-                        <span style="font-size:0.9em;">行列必至</span>
-                    </li>
-                    <li style="display:block; margin-bottom:10px;">
-                        <a href="http://www.hakata-issou.com/" target="_blank" class="shop-link-btn">博多一双<span
-                                class="small-icon">🔗</span></a>
-                        <span style="font-size:0.9em;">泡系豚骨！</span>
-                    </li>
-                    <li style="display:block; margin-bottom:10px;">
-                        <a href="http://www.ganso-nagahamaya.co.jp/" target="_blank" class="shop-link-btn">元祖長浜屋<span
-                                class="small-icon">🔗</span></a>
-                        <span style="font-size:0.9em;">朝ラーおすすめ</span>
-                    </li>
-                </ul>
-                <a href="https://goo.gl/maps/search/hakata_ramen" target="_blank"
-                    class="map-link btn-style">ラーメンマップを開く</a>
+            <!-- 18:00 大宴会 -->
+            <div class="event-new">
+              <div class="time-badge">
+                <span class="icon">🍻</span>
+                18:00
+              </div>
+              <div class="event-card party-style tilted-left">
+                <div class="masking-tape top-left" style="background: var(--masking-tape-pink);"></div>
+                <div class="masking-tape top-right" style="background: var(--masking-tape-blue);"></div>
+                <div class="card-content">
+                  <div class="event-title">【大宴会】ごちそうをいただきます！！🎉</div>
+                  <div class="event-note">今日のメインイベント！</div>
+                </div>
+                <div class="card-photo">📷 宴会</div>
+                <span class="peek-chara top-right">🥳</span>
+              </div>
             </div>
-        </section>
+
+            <!-- 20:00 二次会 -->
+            <div class="event-new">
+              <div class="time-badge" style="border-color: #ffec00;">
+                <span class="icon">🎤</span>
+                20:00
+              </div>
+              <div class="event-card night-style tilted-right">
+                <div class="masking-tape top-left" style="background: var(--masking-tape-yellow);"></div>
+                <div class="card-content">
+                  <div class="event-title">【二次会】2次会も楽しもう！🎶</div>
+                  <div class="event-note">まだまだ夜は続く！</div>
+                </div>
+                <div class="card-photo">📷 二次会</div>
+                <span class="peek-chara top-right">🌙</span>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="day-footer">🌙✨ Day 1 おつかれさま！</div>
+        </div>
+      </div>
+
+      <!-- ========== DAY 2 ========== -->
+      <div id="day2-detail" class="day-section day-2">
+        <div class="container">
+          <div class="day-header">
+            Day 2 <small>2/5(木) 太宰府・博多</small>
+            <span class="header-emoji">⛩️</span>
+          </div>
+
+          <div class="timeline-new">
+            <div class="road-line"></div>
+
+            <!-- 07:30 朝食 -->
+            <div class="event-new">
+              <div class="time-badge">
+                <span class="icon">🍚</span>
+                07:30
+              </div>
+              <div class="event-card lunch-style tilted-right">
+                <div class="masking-tape top-left"></div>
+                <div class="card-content">
+                  <div class="event-title">朝食！🌅</div>
+                  <div class="event-note">しっかり食べて元気に！</div>
+                </div>
+                <div class="card-photo">📷 朝食</div>
+                <span class="peek-chara top-right">☀️</span>
+              </div>
+            </div>
+
+            <!-- 09:00 ロビー集合 -->
+            <div class="event-new">
+              <div class="time-badge">
+                <span class="icon">🧑‍🤝‍🧑</span>
+                09:00
+              </div>
+              <div class="event-card tilted-left">
+                <div class="masking-tape top-left" style="background: var(--masking-tape-blue);"></div>
+                <div class="card-content">
+                  <div class="event-title">ロビー集合</div>
+                  <div class="event-note">時間厳守で！</div>
+                </div>
+                <div class="card-photo">📷</div>
+              </div>
+            </div>
+
+            <!-- 09:30 移動 -->
+            <div class="event-new">
+              <div class="time-badge">
+                <span class="icon">🚗</span>
+                09:30
+              </div>
+              <div class="event-card bus-style tilted-right">
+                <div class="masking-tape top-left" style="background: var(--masking-tape-green);"></div>
+                <div class="card-content">
+                  <div class="event-title" style="color: #2980B9;">【移動】別府 → 太宰府</div>
+                  <div class="event-note">ドライブ楽しもう！🚗💨</div>
+                </div>
+                <div class="card-photo">📷 移動</div>
+                <span class="peek-chara bottom-left">🛣️</span>
+              </div>
+            </div>
+
+            <!-- 12:00 ランチ -->
+            <div class="event-new">
+              <div class="time-badge">
+                <span class="icon">🍜</span>
+                12:00
+              </div>
+              <div class="event-card lunch-style tilted-left">
+                <div class="masking-tape top-left" style="background: var(--masking-tape-pink);"></div>
+                <div class="masking-tape top-right" style="background: var(--masking-tape-yellow);"></div>
+                <div class="card-content">
+                  <div class="event-title">【ランチ】太宰府</div>
+                  <div class="event-note">太宰府グルメを堪能！🍡</div>
+                </div>
+                <div class="card-photo">📷 ランチ</div>
+                <span class="peek-chara top-right">⛩️</span>
+              </div>
+            </div>
+
+            <!-- 14:00 自由時間 -->
+            <div class="event-new">
+              <div class="time-badge">
+                <span class="icon">🚙</span>
+                14:00
+              </div>
+              <div class="event-card free-style tilted-right">
+                <div class="masking-tape top-left" style="background: var(--masking-tape-yellow);"></div>
+                <div class="card-content">
+                  <div class="event-title">自由時間！</div>
+                  <div class="event-note">レンタカー手配してます！🚗<br>（トヨタレンタカー博多駅前）</div>
+                </div>
+                <div class="card-photo">📷</div>
+                <span class="peek-chara top-right">🗺️</span>
+              </div>
+            </div>
+
+            <!-- 18:00 ホテルチェックイン -->
+            <div class="event-new">
+              <div class="time-badge">
+                <span class="icon">🏨</span>
+                18:00
+              </div>
+              <div class="event-card hotel-style tilted-left">
+                <div class="masking-tape top-left"></div>
+                <div class="card-content">
+                  <div class="event-title">ホテルチェックイン</div>
+                  <div class="event-note">ホテルルートイン博多駅 -博多口-</div>
+                </div>
+                <div class="card-photo">📷 ホテル</div>
+              </div>
+            </div>
+
+            <!-- 19:00 ディナー -->
+            <div class="event-new">
+              <div class="time-badge">
+                <span class="icon">🍗</span>
+                19:00
+              </div>
+              <div class="event-card party-style tilted-right">
+                <div class="masking-tape top-left" style="background: var(--masking-tape-pink);"></div>
+                <div class="masking-tape top-right" style="background: var(--masking-tape-green);"></div>
+                <div class="card-content">
+                  <div class="event-title">【Dinner】ぢどり屋大和 別館 🐔</div>
+                  <a href="https://tabelog.com/fukuoka/A4001/A400101/40001216/" target="_blank" class="event-link">食べログ
+                    →</a>
+                  <div class="event-note">TEL: 050-5869-7116</div>
+                </div>
+                <div class="card-photo">📷 ディナー</div>
+                <span class="peek-chara top-right">🥢</span>
+              </div>
+            </div>
+
+            <!-- 21:00 二軒目 -->
+            <div class="event-new">
+              <div class="time-badge" style="border-color: #ffec00;">
+                <span class="icon">🎤</span>
+                21:00
+              </div>
+              <div class="event-card night-style tilted-left">
+                <div class="masking-tape top-left" style="background: var(--masking-tape-yellow);"></div>
+                <div class="card-content">
+                  <div class="event-title">【Party】2軒目へGO！🎤🏓🍜</div>
+                  <div class="event-note">博多の夜を楽しもう！</div>
+                </div>
+                <div class="card-photo">📷 パーティ</div>
+                <span class="peek-chara top-right">🌃</span>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="day-footer">🌙✨ Day 2 おつかれさま！</div>
+        </div>
+      </div>
+
+      <!-- ========== DAY 3 ========== -->
+      <div id="day3-detail" class="day-section day-3">
+        <div class="container">
+          <div class="day-header">
+            Day 3 <small>2/6(金) 博多・帰宅</small>
+            <span class="header-emoji">✈️</span>
+          </div>
+
+          <div class="timeline-new">
+            <div class="road-line"></div>
+
+            <!-- 09:45 ロビー集合 -->
+            <div class="event-new">
+              <div class="time-badge">
+                <span class="icon">🧳</span>
+                09:45
+              </div>
+              <div class="event-card tilted-right">
+                <div class="masking-tape top-left"></div>
+                <div class="masking-tape top-right"></div>
+                <div class="card-content">
+                  <div class="event-title">ロビー集合＆チェックアウト</div>
+                  <div class="event-note">忘れ物チェック！</div>
+                </div>
+                <div class="card-photo">📷</div>
+                <span class="peek-chara top-right">👋</span>
+              </div>
+            </div>
+
+            <!-- 10:00 自由行動 -->
+            <div class="event-new">
+              <div class="time-badge">
+                <span class="icon">🛍️</span>
+                10:00
+              </div>
+              <div class="event-card free-style tilted-left">
+                <div class="masking-tape top-left" style="background: var(--masking-tape-yellow);"></div>
+                <div class="card-content">
+                  <div class="event-title">自由行動 & お土産購入</div>
+                  <div class="event-note">博多駅・天神周辺 🛒</div>
+                </div>
+                <div class="card-photo">📷 お土産</div>
+                <span class="peek-chara top-right">🎁</span>
+              </div>
+            </div>
+
+            <!-- 12:00 ランチ -->
+            <div class="event-new">
+              <div class="time-badge">
+                <span class="icon">🍜</span>
+                12:00
+              </div>
+              <div class="event-card lunch-style tilted-right">
+                <div class="masking-tape top-left" style="background: var(--masking-tape-pink);"></div>
+                <div class="masking-tape top-right" style="background: var(--masking-tape-green);"></div>
+                <div class="card-content">
+                  <div class="event-title">【各自でランチ】ラスト福岡飯 🍜</div>
+                  <div class="event-note">最後の福岡グルメを満喫！</div>
+                </div>
+                <div class="card-photo">📷 ラーメン</div>
+                <span class="peek-chara top-right">🍥</span>
+              </div>
+            </div>
+
+            <!-- 14:00 レンタカー返却 -->
+            <div class="event-new">
+              <div class="time-badge">
+                <span class="icon">🚗</span>
+                14:00
+              </div>
+              <div class="event-card bus-style tilted-left">
+                <div class="masking-tape top-left" style="background: var(--masking-tape-blue);"></div>
+                <div class="card-content">
+                  <div class="event-title" style="color: #2980B9;">レンタカー返却</div>
+                  <div class="event-note">福岡空港で返却 🚙</div>
+                </div>
+                <div class="card-photo">📷</div>
+              </div>
+            </div>
+
+            <!-- 14:30 空港集合 -->
+            <div class="event-new">
+              <div class="time-badge">
+                <span class="icon">🧑‍🤝‍🧑</span>
+                14:30
+              </div>
+              <div class="event-card tilted-right">
+                <div class="masking-tape top-left"></div>
+                <div class="card-content">
+                  <div class="event-title">空港集合</div>
+                  <div class="event-note">搭乗手続きしよう！</div>
+                </div>
+                <div class="card-photo">📷</div>
+              </div>
+            </div>
+
+            <!-- 15:00 解散 -->
+            <div class="event-new">
+              <div class="time-badge">
+                <span class="icon">✈️</span>
+                15:00
+              </div>
+              <div class="event-card tilted-left"
+                style="background: linear-gradient(135deg, #FFECD2, #FCB69F); border: 2px solid var(--secondary-color);">
+                <div class="masking-tape top-left" style="background: var(--masking-tape-pink);"></div>
+                <div class="masking-tape top-right" style="background: var(--masking-tape-yellow);"></div>
+                <div class="card-content">
+                  <div class="event-title" style="color: #E74C3C;">解散・フライト ✈️</div>
+                  <div class="group-times">
+                    <span>🛫 東京組 16:00発</span>
+                    <span>🛫 大阪組 17:00発</span>
+                  </div>
+                  <div class="event-note">お疲れ様でした！🎉</div>
+                </div>
+                <div class="card-photo">📷 空港</div>
+                <span class="peek-chara top-right">👋</span>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="day-footer">🎉✨ お疲れ様でした！また旅しよう！</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bingo Game Section (External Link) -->
+    <section id="bingo" class="section" style="background: none; padding: 0;">
+      <div class="section-header" style="transform: rotate(1deg);">
+        <img src="images/bingo.png" alt="" class="section-icon">
+        <h2 class="section-title">MISSION BINGO</h2>
+      </div>
+
+      <div class="bingo-section">
+        <div class="masking-tape top-left"></div>
+        <div class="masking-tape top-right"></div>
+        <span class="bingo-deco left">🎯</span>
+        <span class="bingo-deco right">⭐</span>
+
+        <div class="bingo-content">
+          <p>ビンゴ大会は専用アプリで開催！<br>下のボタンからアクセスして参加してね 🎮</p>
+          <a href="https://bingoapps.vercel.app/" target="_blank" class="bingo-btn">
+            <span class="icon">🎯</span>
+            ビンゴ会場へGO!
+          </a>
+          <p class="bingo-note">※Googleアカウントでログインしてね</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Useful Info -->
+    <section id="hotel" class="section" style="background: none; padding: 0;">
+      <div class="section-header" style="transform: rotate(-0.5deg);">
+        <img src="images/info.png" alt="" class="section-icon">
+        <h2 class="section-title">お役立ち情報</h2>
+      </div>
+
+      <div class="info-section">
+        <!-- ホテル1 -->
+        <div class="info-card">
+          <div class="masking-tape"></div>
+          <div class="info-card-title">
+            <span class="emoji">🏨</span>
+            1日目: ホテル別府パストラル
+          </div>
+          <p class="info-address">📍 別府市東荘園町1-4</p>
+          <div class="info-tel">
+            <span>TEL</span>
+            <a href="tel:0977234201">0977-23-4201</a>
+          </div>
+          <br>
+          <a href="https://goo.gl/maps/placeholder_beppu" target="_blank" class="info-btn">📍 Mapsで見る</a>
+          <span class="peek-chara">♨️</span>
+        </div>
+
+        <!-- ホテル2 -->
+        <div class="info-card">
+          <div class="masking-tape"></div>
+          <div class="info-card-title">
+            <span class="emoji">🏨</span>
+            2日目: ホテルルートイン博多駅
+          </div>
+          <p class="info-address">📍 福岡市博多区博多駅前1-1-20</p>
+          <div class="info-tel">
+            <span>TEL</span>
+            <a href="tel:0924778888">092-477-8888</a>
+          </div>
+          <br>
+          <a href="https://goo.gl/maps/placeholder_hakata" target="_blank" class="info-btn">📍 Mapsで見る</a>
+          <span class="peek-chara">🚃</span>
+        </div>
+
+        <!-- レンタカー（借りる） -->
+        <div class="info-card">
+          <div class="masking-tape"></div>
+          <div class="info-card-title">
+            <span class="emoji">🚗</span>
+            レンタカー（借りる）
+          </div>
+          <p class="info-address">トヨタレンタカー博多駅前店</p>
+          <div class="info-tel">
+            <a href="https://rent.toyota.co.jp/sp/shop/detail.aspx?rCode=68101&eCode=012" target="_blank">店舗詳細 🔗</a>
+          </div>
+          <br>
+          <a href="https://goo.gl/maps/search/Toyota_Rent_a_Car_Hakata_Ekimae" target="_blank" class="info-btn">📍
+            Mapsで見る</a>
+        </div>
+
+        <!-- レンタカー（返す） -->
+        <div class="info-card">
+          <div class="masking-tape"></div>
+          <div class="info-card-title">
+            <span class="emoji">🚗</span>
+            レンタカー（返す）
+          </div>
+          <p class="info-address">トヨタレンタカー福岡空港店</p>
+          <div class="info-tel">
+            <a href="https://rent.toyota.co.jp/sp/shop/detail.aspx?rCode=68101&eCode=013" target="_blank">店舗詳細 🔗</a>
+          </div>
+          <br>
+          <a href="https://goo.gl/maps/search/Toyota_Rent_a_Car_Fukuoka_Airport" target="_blank" class="info-btn">📍
+            Mapsで見る</a>
+        </div>
+
+        <!-- ラーメン -->
+        <div class="section-header" style="margin-top: 30px; transform: rotate(1deg); margin-bottom: 20px;">
+          <img src="images/info.png" alt="" class="section-icon">
+          <h2 class="section-title">おすすめラーメン（博多）</h2>
+        </div>
+
+        <div class="ramen-overview">
+          <!-- Card 1: ShinShin -->
+          <div class="ramen-card">
+            <div class="masking-tape"></div>
+            <span class="ramen-name">ShinShin</span>
+            <div class="ramen-photo">
+              <img src="images/ramen_shinshin.png" alt="ShinShin">
+            </div>
+            <p class="ramen-comment">行列必至！<br>博多の超有名店</p>
+            <a href="https://www.hakata-shinshin.com/" target="_blank" class="ramen-link">サイトへ 🔗</a>
+          </div>
+
+          <!-- Card 2: Hakata Issou -->
+          <div class="ramen-card">
+            <div class="masking-tape"></div>
+            <span class="ramen-name">博多一双</span>
+            <div class="ramen-photo">
+              <img src="images/ramen_issou.jpg" alt="博多一双">
+            </div>
+            <p class="ramen-comment">泡系豚骨！<br>濃厚クリーミー</p>
+            <a href="http://www.hakata-issou.com/" target="_blank" class="ramen-link">サイトへ 🔗</a>
+          </div>
+
+          <!-- Card 3: Ganso Nagahamaya -->
+          <div class="ramen-card">
+            <div class="masking-tape"></div>
+            <span class="ramen-name">元祖長浜屋</span>
+            <div class="ramen-photo">
+              <img src="images/ramen_ganso.jpg" alt="元祖長浜屋">
+            </div>
+            <p class="ramen-comment">朝ラーおすすめ！<br>あっさり豚骨</p>
+            <a href="http://www.ganso-nagahamaya.co.jp/" target="_blank" class="ramen-link">サイトへ 🔗</a>
+          </div>
 
 
 
-    </main>
+        </div>
+      </div>
+    </section>
 
-    <footer>
-        <p>PIF社員旅行実行委員会2026</p>
-    </footer>
 
-    <script src="script.js"></script>
+
+  </main>
+
+  <footer>
+    <p>PIF社員旅行実行委員会2026</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 
 </html>

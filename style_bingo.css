@@ -1,0 +1,91 @@
+/* ========== ビンゴセクション ========== */
+.bingo-section {
+    background: linear-gradient(135deg, #fff0fa, #ffe4ec);
+    border-radius: 20px;
+    padding: 24px;
+    margin-bottom: 40px;
+    position: relative;
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+    overflow: visible;
+}
+
+.bingo-section .masking-tape {
+    position: absolute;
+    width: 60px;
+    height: 20px;
+    opacity: 0.7;
+}
+
+.bingo-section .masking-tape.top-left {
+    top: -10px;
+    left: 20px;
+    transform: rotate(-12deg);
+    background: var(--masking-tape-yellow);
+}
+
+.bingo-section .masking-tape.top-right {
+    top: -8px;
+    right: 25px;
+    transform: rotate(8deg);
+    background: var(--masking-tape-green);
+}
+
+.bingo-content {
+    text-align: center;
+}
+
+.bingo-content p {
+    font-family: var(--font-hand);
+    font-size: 1rem;
+    margin-bottom: 16px;
+    line-height: 1.6;
+}
+
+.bingo-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #ffec00;
+    color: #333;
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 800;
+    padding: 14px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 4px 0 #cc417a;
+    border: 2px solid #333;
+    transition: transform 0.1s;
+}
+
+.bingo-btn:active {
+    transform: translateY(3px);
+    box-shadow: 0 1px 0 #cc417a;
+}
+
+.bingo-btn .icon {
+    font-size: 1.3rem;
+}
+
+.bingo-note {
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: 12px;
+}
+
+.bingo-deco {
+    position: absolute;
+    font-size: 2rem;
+}
+
+.bingo-deco.left {
+    left: -10px;
+    bottom: 20px;
+    transform: rotate(-15deg);
+}
+
+.bingo-deco.right {
+    right: -10px;
+    top: 30px;
+    transform: rotate(15deg);
+}

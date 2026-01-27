@@ -1,0 +1,161 @@
+/* ========== セクション見出し ========== */
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding: 12px 20px;
+  background: white;
+  border-radius: 30px;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+  position: relative;
+  transform: rotate(-1deg);
+}
+
+.section-header::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 30px;
+  width: 50px;
+  height: 18px;
+  background: var(--masking-tape-pink);
+  transform: rotate(-10deg);
+  opacity: 0.7;
+}
+
+.section-icon {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  margin: 0;
+}
+
+/* ========== 全体スケジュール（横並び） ========== */
+.schedule-overview {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  /* 縦スクロール禁止 */
+  padding-bottom: 20px;
+  /* スクロールバーの干渉を防ぐ */
+  margin-bottom: 20px;
+  -webkit-overflow-scrolling: touch;
+  /* 滑らかなスクロール */
+  scroll-snap-type: x mandatory;
+  /* スナップ追加で安定 */
+}
+
+.day-mini-card {
+  flex: 0 0 auto;
+  width: 150px;
+  background: white;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: visible;
+}
+
+.day-mini-card:nth-child(1) {
+  transform: rotate(-2deg);
+}
+
+.day-mini-card:nth-child(2) {
+  transform: rotate(1deg);
+}
+
+.day-mini-card:nth-child(3) {
+  transform: rotate(-1deg);
+}
+
+.day-mini-card .masking-tape {
+  position: absolute;
+  top: -8px;
+  left: 20px;
+  width: 50px;
+  height: 16px;
+  opacity: 0.7;
+}
+
+.day-mini-card:nth-child(1) .masking-tape {
+  background: var(--masking-tape-green);
+  transform: rotate(-8deg);
+}
+
+.day-mini-card:nth-child(2) .masking-tape {
+  background: var(--masking-tape-pink);
+  transform: rotate(5deg);
+}
+
+.day-mini-card:nth-child(3) .masking-tape {
+  background: var(--masking-tape-blue);
+  transform: rotate(-5deg);
+}
+
+.day-badge-mini {
+  display: inline-block;
+  background: var(--secondary-color);
+  color: white;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 12px;
+  margin-bottom: 8px;
+}
+
+.day-date {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: var(--primary-color);
+  margin-bottom: 6px;
+}
+
+.day-theme {
+  font-family: var(--font-hand);
+  font-size: 0.95rem;
+  color: var(--text-color);
+  line-height: 1.4;
+}
+
+.day-emoji {
+  position: absolute;
+  bottom: -10px;
+  right: -8px;
+  font-size: 1.8rem;
+  transform: rotate(10deg);
+}
+
+.detail-link-mini {
+  display: inline-block;
+  margin-top: 10px;
+  background: var(--accent-color);
+  color: white;
+  font-size: 0.7rem;
+  font-weight: bold;
+  padding: 4px 10px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+/* レスポンシブ */
+@media (max-width: 420px) {
+  .schedule-overview {
+    gap: 10px;
+  }
+
+  .day-mini-card {
+    width: 140px;
+    padding: 14px;
+  }
+}

@@ -12,8 +12,8 @@ const itinerary = [
     { start: "2026-02-04T16:00", end: "2026-02-04T16:30", title: "ホテルチェックイン", next: "自由時間" },
     { start: "2026-02-04T16:30", end: "2026-02-04T18:00", title: "自由時間", next: "大宴会" },
     { start: "2026-02-04T18:00", end: "2026-02-04T20:00", title: "大宴会", next: "二次会" },
-    { start: "2026-02-04T20:00", end: "2026-02-04T23:00", title: "二次会", next: "自由時間" },
-    { start: "2026-02-04T23:00", end: "2026-02-05T07:30", title: "自由時間 / 就寝", next: "朝食" },
+    { start: "2026-02-04T20:00", end: "2026-02-05T07:30", title: "二次会", next: "朝食" },
+    // Removed 23:00 event to match HTML
 
     // Day 2: 2026-02-05
     { start: "2026-02-05T07:30", end: "2026-02-05T09:00", title: "朝食", next: "ロビー集合" },
@@ -49,7 +49,7 @@ function jumpToCurrentEvent() {
     // We need to match the itinerary items to the DOM elements. 
     // Let's assume the order in 'itinerary' matches the order of '.event' classes in the DOM.
 
-    const eventElements = document.querySelectorAll('.event');
+    const eventElements = document.querySelectorAll('.event-new');
 
     // Safety check
     if (itinerary.length !== eventElements.length) {

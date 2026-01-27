@@ -1,0 +1,539 @@
+/* 各日の背景 */
+.day-section {
+    position: relative;
+    padding: 30px 20px 50px;
+}
+
+.day-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+        radial-gradient(rgba(255, 159, 28, 0.4) 1px, transparent 1px),
+        radial-gradient(rgba(255, 82, 153, 0.3) 1px, transparent 1px);
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Day 1: 別府 - 温泉っぽい青〜夜 */
+.day-1 {
+    background: linear-gradient(180deg,
+            #FFE4B5 0%,
+            #87CEEB 12%,
+            #B0E0E6 25%,
+            #87CEEB 40%,
+            #FFB347 55%,
+            #FF7F50 65%,
+            #DE6FA1 75%,
+            #2C3E50 88%,
+            #1a1a2e 100%);
+}
+
+/* Day 2: 太宰府〜博多 - 緑〜夜 */
+.day-2 {
+    background: linear-gradient(180deg,
+            #FFECD2 0%,
+            #A8E6CF 15%,
+            #88D8B0 30%,
+            #7EC8E3 45%,
+            #FFB347 60%,
+            #FF6B6B 75%,
+            #2C3E50 90%,
+            #1a1a2e 100%);
+}
+
+/* Day 3: 博多〜帰宅 - 朝〜昼 */
+.day-3 {
+    background: linear-gradient(180deg,
+            #FFECD2 0%,
+            #FFE4B5 20%,
+            #87CEEB 50%,
+            #B0E0E6 80%,
+            #87CEEB 100%);
+}
+
+/* Day ヘッダー */
+.day-header {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 12px 24px;
+    display: inline-block;
+    transform: rotate(-1deg);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 24px;
+    font-size: 1.4rem;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    position: relative;
+}
+
+.day-header small {
+    font-size: 0.7em;
+    font-weight: 500;
+    margin-left: 8px;
+}
+
+.header-emoji {
+    position: absolute;
+    right: -25px;
+    top: -20px;
+    font-size: 2rem;
+    transform: rotate(15deg);
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.2));
+    animation: emoji-bounce 2s ease-in-out infinite;
+}
+
+@keyframes emoji-bounce {
+
+    0%,
+    100% {
+        transform: rotate(15deg) translateY(0);
+    }
+
+    50% {
+        transform: rotate(15deg) translateY(-4px);
+    }
+}
+
+/* タイムライン */
+.timeline-new {
+    position: relative;
+    padding-left: 70px;
+}
+
+.road-line {
+    position: absolute;
+    left: 28px;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    background: repeating-linear-gradient(to bottom,
+            var(--secondary-color) 0px,
+            var(--secondary-color) 10px,
+            transparent 10px,
+            transparent 20px);
+    border-radius: 3px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* イベントカード */
+.event-new {
+    position: relative;
+    margin-bottom: 28px;
+}
+
+.time-badge {
+    position: absolute;
+    left: -70px;
+    top: 16px;
+    width: 50px;
+    height: 50px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 0.8rem;
+    font-family: var(--font-heading);
+    color: var(--text-color);
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15);
+    border: 3px solid var(--secondary-color);
+    line-height: 1.1;
+    z-index: 5;
+}
+
+.time-badge .icon {
+    font-size: 1rem;
+    margin-bottom: 1px;
+}
+
+/* カード本体 */
+.event-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    min-height: 120px;
+    overflow: visible;
+}
+
+.event-card.tilted-right {
+    transform: rotate(0.6deg);
+}
+
+.event-card.tilted-left {
+    transform: rotate(-0.5deg);
+}
+
+.card-content {
+    flex: 1;
+    padding: 14px 16px;
+    position: relative;
+    z-index: 2;
+}
+
+.card-photo {
+    width: 42%;
+    min-width: 120px;
+    position: relative;
+    background: linear-gradient(135deg, #e8e8e8, #d0d0d0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 0.75rem;
+    text-align: center;
+    border-radius: 0 12px 12px 0;
+    overflow: hidden;
+}
+
+.card-photo::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 40px;
+    background: linear-gradient(to right, var(--card-bg) 0%, transparent 100%);
+    z-index: 1;
+}
+
+.event-title {
+    font-size: 1rem;
+    font-weight: 800;
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    margin-bottom: 4px;
+    line-height: 1.3;
+}
+
+.event-note {
+    font-family: var(--font-hand);
+    font-size: 0.95rem;
+    color: var(--text-color);
+    margin-top: 6px;
+}
+
+.event-link {
+    display: inline-block;
+    margin-top: 6px;
+    background: var(--accent-color);
+    color: #fff;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* マスキングテープ */
+.masking-tape {
+    position: absolute;
+    width: 60px;
+    height: 20px;
+    opacity: 0.75;
+    z-index: 15;
+}
+
+.masking-tape.top-left {
+    top: -10px;
+    left: 15px;
+    transform: rotate(-12deg);
+    background: var(--masking-tape-green);
+}
+
+.masking-tape.top-right {
+    top: -8px;
+    right: 20px;
+    transform: rotate(10deg);
+    background: var(--masking-tape-pink);
+}
+
+.masking-tape.bottom-right {
+    bottom: -8px;
+    right: 25px;
+    transform: rotate(-5deg);
+    background: var(--masking-tape-yellow);
+}
+
+/* キャラひょっこり */
+.peek-chara {
+    position: absolute;
+    font-size: 1.8rem;
+    z-index: 20;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.15));
+}
+
+.peek-chara.top-right {
+    top: -15px;
+    right: -10px;
+    transform: rotate(10deg);
+}
+
+.peek-chara.bottom-left {
+    bottom: -10px;
+    left: -10px;
+    transform: rotate(-10deg);
+}
+
+/* 集合時間 */
+.group-times {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    font-size: 0.8rem;
+    margin-top: 6px;
+}
+
+.group-times span {
+    background: #FFF9E6;
+    padding: 3px 8px;
+    border-radius: 4px;
+    display: inline-block;
+    width: fit-content;
+}
+
+/* バスカード */
+.event-card.bus-style {
+    background: linear-gradient(135deg, #E8F6FF, #D0ECFF);
+}
+
+.event-card.bus-style .card-photo::before {
+    background: linear-gradient(to right, #E8F6FF 0%, transparent 100%);
+}
+
+.bus-route {
+    font-weight: 800;
+    font-size: 0.95rem;
+    font-family: var(--font-heading);
+    color: #2980B9;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* ランチカード */
+.event-card.lunch-style {
+    background: linear-gradient(135deg, #FFF8E7, #FFEDCC);
+}
+
+.event-card.lunch-style .card-photo::before {
+    background: linear-gradient(to right, #FFF8E7 0%, transparent 100%);
+}
+
+.event-card.lunch-style .event-title {
+    color: #D35400;
+}
+
+.lunch-place {
+    background: var(--primary-color);
+    color: white;
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    display: inline-block;
+    margin-top: 4px;
+}
+
+/* 宴会・パーティカード */
+.event-card.party-style {
+    background: linear-gradient(135deg, #FFF0F5, #FFE4EC);
+    border: 2px solid var(--primary-color);
+}
+
+.event-card.party-style .card-photo::before {
+    background: linear-gradient(to right, #FFF0F5 0%, transparent 100%);
+}
+
+/* 夜カード */
+.event-card.night-style {
+    background: linear-gradient(135deg, #2d2d44, #3d3d5c);
+    border: 2px solid var(--secondary-color);
+}
+
+.event-card.night-style .card-photo {
+    background: linear-gradient(135deg, #3d3d5c, #2d2d44);
+}
+
+.event-card.night-style .card-photo::before {
+    background: linear-gradient(to right, #2d2d44 0%, transparent 100%);
+}
+
+.event-card.night-style .event-title {
+    color: #ffec00;
+}
+
+.event-card.night-style .event-note {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+/* ホテルカード */
+.event-card.hotel-style {
+    background: linear-gradient(135deg, #E8F8F5, #D1F2EB);
+    border: 2px solid #1ABC9C;
+}
+
+.event-card.hotel-style .card-photo::before {
+    background: linear-gradient(to right, #E8F8F5 0%, transparent 100%);
+}
+
+.event-card.hotel-style .event-title {
+    color: #1ABC9C;
+}
+
+/* 自由時間カード */
+.event-card.free-style {
+    background: linear-gradient(135deg, #FCF3CF, #F9E79F);
+    border: 2px dashed #F39C12;
+}
+
+.event-card.free-style .card-photo::before {
+    background: linear-gradient(to right, #FCF3CF 0%, transparent 100%);
+}
+
+.event-card.free-style .event-title {
+    color: #D68910;
+}
+
+/* チーム分け */
+.team-split-card {
+    background: white;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+    position: relative;
+    border: 2px dashed var(--accent-color);
+    overflow: visible;
+}
+
+.team-split-header {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 1rem;
+    color: var(--accent-color);
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.team-columns {
+    display: flex;
+    gap: 12px;
+}
+
+.team-column {
+    flex: 1;
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 12px;
+    position: relative;
+}
+
+.team-column.team-a {
+    background: linear-gradient(135deg, #E8F6FF, #D4ECFB);
+}
+
+.team-column.team-b {
+    background: linear-gradient(135deg, #FFF0F5, #FFE4EC);
+}
+
+.team-name {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+    padding-bottom: 6px;
+    border-bottom: 2px dotted rgba(0, 0, 0, 0.1);
+}
+
+.team-a .team-name {
+    color: #2980B9;
+}
+
+.team-b .team-name {
+    color: var(--primary-color);
+}
+
+.team-schedule {
+    font-size: 0.8rem;
+    line-height: 1.7;
+}
+
+.team-schedule li {
+    list-style: none;
+    position: relative;
+    padding-left: 16px;
+    margin-bottom: 4px;
+}
+
+.team-schedule li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--secondary-color);
+}
+
+.team-emoji {
+    position: absolute;
+    top: -12px;
+    right: -8px;
+    font-size: 1.5rem;
+    transform: rotate(10deg);
+}
+
+/* フッター */
+.day-footer {
+    text-align: center;
+    margin-top: 30px;
+    padding-bottom: 10px;
+    font-family: var(--font-hand);
+    font-size: 1.2rem;
+}
+
+.day-1 .day-footer {
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.day-2 .day-footer {
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.day-3 .day-footer {
+    color: var(--text-color);
+}
+
+/* レスポンシブ */
+@media (max-width: 420px) {
+    .timeline-new {
+        padding-left: 58px;
+    }
+
+    .time-badge {
+        width: 44px;
+        height: 44px;
+        font-size: 0.7rem;
+        left: -58px;
+    }
+
+    .road-line {
+        left: 24px;
+    }
+
+    .card-photo {
+        width: 38%;
+        min-width: 100px;
+    }
+
+    .team-columns {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,255 @@
+/* ========== お役立ち情報セクション ========== */
+.info-section {
+    margin-bottom: 40px;
+}
+
+.info-card {
+    background: white;
+    border-radius: 16px;
+    padding: 18px;
+    margin-bottom: 16px;
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.08);
+    position: relative;
+    overflow: visible;
+}
+
+.info-card:nth-child(odd) {
+    transform: rotate(0.5deg);
+}
+
+.info-card:nth-child(even) {
+    transform: rotate(-0.5deg);
+}
+
+.info-card .masking-tape {
+    position: absolute;
+    top: -8px;
+    left: 20px;
+    width: 55px;
+    height: 18px;
+    opacity: 0.7;
+    transform: rotate(-10deg);
+}
+
+.info-card:nth-child(1) .masking-tape {
+    background: var(--masking-tape-green);
+}
+
+.info-card:nth-child(2) .masking-tape {
+    background: var(--masking-tape-pink);
+}
+
+.info-card:nth-child(3) .masking-tape {
+    background: var(--masking-tape-blue);
+}
+
+.info-card-title {
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.info-card-title .emoji {
+    font-size: 1.2rem;
+}
+
+.info-address {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.info-tel {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #f5f5f5;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+}
+
+.info-tel a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.info-btn {
+    display: inline-block;
+    background: var(--accent-color);
+    color: white;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 6px 14px;
+    border-radius: 12px;
+    text-decoration: none;
+}
+
+.info-card .peek-chara {
+    position: absolute;
+    font-size: 1.6rem;
+    bottom: -8px;
+    right: -6px;
+    transform: rotate(10deg);
+}
+
+/* ========== おすすめラーメン（新デザイン） ========== */
+.ramen-overview {
+    display: flex;
+    gap: 12px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    /* 縦スクロール禁止 */
+    padding-bottom: 20px;
+    /* スクロールバー余白 */
+    margin-bottom: 20px;
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+}
+
+.ramen-card {
+    flex: 0 0 auto;
+    width: 160px;
+    /* 少し幅広 */
+    min-height: 250px;
+    /* 縦長に */
+    background: white;
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.ramen-card:nth-child(1) {
+    transform: rotate(-1.5deg);
+}
+
+.ramen-card:nth-child(2) {
+    transform: rotate(1.5deg);
+}
+
+.ramen-card:nth-child(3) {
+    transform: rotate(-1deg);
+}
+
+.ramen-card .masking-tape {
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-2deg);
+    width: 60px;
+    height: 18px;
+    opacity: 0.7;
+}
+
+.ramen-card:nth-child(1) .masking-tape {
+    background: var(--masking-tape-yellow);
+    transform: translateX(-50%) rotate(-5deg);
+}
+
+.ramen-card:nth-child(2) .masking-tape {
+    background: var(--masking-tape-green);
+    transform: translateX(-50%) rotate(3deg);
+}
+
+.ramen-card:nth-child(3) .masking-tape {
+    background: var(--masking-tape-pink);
+    transform: translateX(-50%) rotate(-3deg);
+}
+
+/* 店名（バッジ風） */
+.ramen-name {
+    display: inline-block;
+    background: var(--primary-color);
+    color: white;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 0.9rem;
+    padding: 4px 12px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    margin-top: 5px;
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* 写真（プレースホルダー） */
+.ramen-photo {
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin-bottom: 12px;
+    position: relative;
+    overflow: hidden;
+}
+
+.ramen-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.ramen-photo::after {
+    content: '🍜';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* 一言コメント */
+.ramen-comment {
+    font-family: var(--font-hand);
+    font-size: 0.95rem;
+    color: var(--text-color);
+    line-height: 1.4;
+    margin-bottom: auto;
+    /* 下部リンクを押し下げる */
+    padding-bottom: 12px;
+}
+
+/* リンクボタン */
+.ramen-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: white;
+    color: var(--accent-color);
+    font-weight: bold;
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 2px solid var(--accent-color);
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: all 0.2s;
+}
+
+.ramen-link:hover {
+    background: var(--accent-color);
+    color: white;
+}
+
+/* レスポンシブ */
+@media (max-width: 420px) {
+    .ramen-card {
+        width: 150px;
+    }
+}
