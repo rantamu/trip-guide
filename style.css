@@ -183,7 +183,14 @@ h4 {
   position: sticky;
   top: 10px;
   z-index: 100;
-  margin: 0 10px;
+  width: 100%;
+  max-width: 600px;
+  /* Constrain max width for desktop */
+  margin: 0 auto;
+  /* Center it */
+  padding: 0 10px;
+  /* Add padding instead of margin to prevent overflow */
+  box-sizing: border-box;
 }
 
 .sticky-nav ul {
@@ -1263,14 +1270,26 @@ footer {
     flex-direction: column;
   }
 }
+
 /* Highlight Flash Effect */
 @keyframes flash-yellow {
-    0%, 100% { background-color: transparent; }
-    50% { background-color: #fff9c4; transform: scale(1.02); box-shadow: 0 0 15px rgba(255, 249, 196, 0.8); }
+
+  0%,
+  100% {
+    background-color: transparent;
+  }
+
+  50% {
+    background-color: #fff9c4;
+    transform: scale(1.02);
+    box-shadow: 0 0 15px rgba(255, 249, 196, 0.8);
+  }
 }
 
 .highlight-flash {
-    animation: flash-yellow 1.5s ease-in-out;
-    z-index: 10; /* Ensure it pops out */
-    position: relative; /* Ensure z-index works */
+  animation: flash-yellow 1.5s ease-in-out;
+  z-index: 10;
+  /* Ensure it pops out */
+  position: relative;
+  /* Ensure z-index works */
 }
