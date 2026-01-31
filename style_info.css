@@ -117,8 +117,8 @@
     /* 縦スクロール禁止 */
     padding-bottom: 20px;
     /* スクロールバー余白 */
-    padding-top: 25px;
-    /* 上部のはみ出し対策 */
+    padding-top: 40px;
+    /* 上部のはみ出し対策（バッジ用） */
     padding-left: 20px;
     padding-right: 40px;
     /* 次がある感じを出す */
@@ -139,6 +139,8 @@
     padding: 16px;
     box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
     position: relative;
+    z-index: 1;
+    /* Default z-index */
     overflow: visible;
     display: flex;
     flex-direction: column;
@@ -148,6 +150,8 @@
 
 .ramen-card:nth-child(1) {
     transform: rotate(-1.5deg);
+    z-index: 10;
+    /* Bring recommended card to front */
 }
 
 .ramen-card:nth-child(2) {
