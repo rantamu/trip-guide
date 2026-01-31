@@ -196,6 +196,7 @@
     margin-bottom: 12px;
     margin-top: 5px;
     box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
 }
 
 /* 写真（プレースホルダー） */
