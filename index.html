@@ -619,145 +619,239 @@
         <h2 class="section-title">お役立ち情報</h2>
       </div>
 
-      <div class="info-section">
-        <!-- ホテル1 -->
-        <div class="info-card">
-          <div class="masking-tape"></div>
-          <div class="info-card-title">
-            <span class="emoji">🏨</span>
-            1日目: ホテル別府パストラル
-          </div>
-          <p class="info-address">📍 別府市東荘園町1-4</p>
-          <div class="info-row">
-            <div class="info-tel">
-              <span>TEL</span>
-              <a href="tel:0977234201">0977-23-4201</a>
-            </div>
-            <a href="https://goo.gl/maps/placeholder_beppu" target="_blank" class="info-btn">📍 Mapsで見る</a>
-          </div>
-          <img src="images/scene_hotel_pastoral.jpg"
-            style="width:100%; height:120px; object-fit:cover; border-radius:8px; margin-top:10px; display:block;"
-            alt="ホテル別府パストラル">
-          <span class="peek-chara">♨️</span>
-        </div>
+      <button id="info-toggle-btn" class="info-toggle-btn">
+        <span class="icon">📂</span> タップして情報をひらく
+      </button>
 
-        <!-- ホテル2 -->
-        <div class="info-card">
-          <div class="masking-tape"></div>
-          <div class="info-card-title">
-            <span class="emoji">🏨</span>
-            2日目: ホテルルートイン博多駅
-          </div>
-          <p class="info-address">📍 福岡市博多区博多駅前1-1-20</p>
-          <div class="info-row">
-            <div class="info-tel">
-              <span>TEL</span>
-              <a href="tel:0924778888">092-477-8888</a>
-            </div>
-            <a href="https://goo.gl/maps/placeholder_hakata" target="_blank" class="info-btn">📍 Mapsで見る</a>
-          </div>
-          <span class="peek-chara">🚃</span>
-        </div>
-
-        <!-- レンタカー（借りる） -->
-        <div class="info-card">
-          <div class="masking-tape"></div>
-          <div class="info-card-title">
-            <span class="emoji">🚗</span>
-            レンタカー（借りる）
-          </div>
-          <p class="info-address">トヨタレンタカー博多駅前店</p>
-          <div class="info-row">
-            <div class="info-tel">
-              <a href="https://rent.toyota.co.jp/sp/shop/detail.aspx?rCode=68101&eCode=012" target="_blank">店舗詳細 🔗</a>
-            </div>
-            <a href="https://goo.gl/maps/search/Toyota_Rent_a_Car_Hakata_Ekimae" target="_blank" class="info-btn">📍
-              Mapsで見る</a>
-          </div>
-        </div>
-
-        <!-- レンタカー（返す） -->
-        <div class="info-card">
-          <div class="masking-tape"></div>
-          <div class="info-card-title">
-            <span class="emoji">🚗</span>
-            レンタカー（返す）
-          </div>
-          <p class="info-address">トヨタレンタカー福岡空港店</p>
-          <div class="info-row">
-            <div class="info-tel">
-              <a href="https://rent.toyota.co.jp/sp/shop/detail.aspx?rCode=68101&eCode=013" target="_blank">店舗詳細 🔗</a>
-            </div>
-            <a href="https://goo.gl/maps/search/Toyota_Rent_a_Car_Fukuoka_Airport" target="_blank" class="info-btn">📍
-              Mapsで見る</a>
-          </div>
-        </div>
-
-        <!-- ラーメン -->
-        <div class="section-header" style="margin-top: 30px; transform: rotate(1deg); margin-bottom: 20px;">
-          <img src="images/info.png" alt="" class="section-icon">
-          <h2 class="section-title">おすすめ博多ラーメン</h2>
-        </div>
-
-        <div class="ramen-overview">
-          <!-- Card 1: Ganso Nagahamaya (Recommended) -->
-          <div class="ramen-card">
+      <div id="info-body" class="info-body">
+        <div class="info-section">
+          <!-- ホテル1 -->
+          <div class="info-card">
             <div class="masking-tape"></div>
-            <div class="recommend-badge">田村さん<br>オススメ!</div>
-            <span class="ramen-name">元祖長浜屋</span>
-            <div class="ramen-photo">
-              <img src="images/ramen_ganso.jpg" alt="元祖長浜屋">
+            <div class="info-card-title">
+              <span class="emoji">🏨</span>
+              1日目: ホテル別府パストラル
             </div>
-            <p class="ramen-comment">朝ラーおすすめ！<br>あっさり豚骨</p>
-            <a href="http://www.ganso-nagahamaya.co.jp/" target="_blank" class="ramen-link">サイトへ 🔗</a>
+            <p class="info-address">📍 別府市東荘園町1-4</p>
+            <div class="info-row">
+              <div class="info-tel">
+                <span>TEL</span>
+                <a href="tel:0977234201">0977-23-4201</a>
+              </div>
+              <a href="https://goo.gl/maps/placeholder_beppu" target="_blank" class="info-btn">📍 Mapsで見る</a>
+            </div>
+            <img src="images/scene_hotel_pastoral.jpg"
+              style="width:100%; height:120px; object-fit:cover; border-radius:8px; margin-top:10px; display:block;"
+              alt="ホテル別府パストラル">
+            <span class="peek-chara">♨️</span>
           </div>
 
-          <!-- Card 2: ShinShin -->
-          <div class="ramen-card">
+          <!-- ホテル2 -->
+          <div class="info-card">
             <div class="masking-tape"></div>
-            <span class="ramen-name">ShinShin</span>
-            <div class="ramen-photo">
-              <img src="images/ramen_shinshin.png" alt="ShinShin">
+            <div class="info-card-title">
+              <span class="emoji">🏨</span>
+              2日目: ホテルルートイン博多駅
             </div>
-            <p class="ramen-comment">行列必至！<br>博多の超有名店</p>
-            <a href="https://www.hakata-shinshin.com/" target="_blank" class="ramen-link">サイトへ 🔗</a>
+            <p class="info-address">📍 福岡市博多区博多駅前1-1-20</p>
+            <div class="info-row">
+              <div class="info-tel">
+                <span>TEL</span>
+                <a href="tel:0924778888">092-477-8888</a>
+              </div>
+              <a href="https://goo.gl/maps/placeholder_hakata" target="_blank" class="info-btn">📍 Mapsで見る</a>
+            </div>
+            <span class="peek-chara">🚃</span>
           </div>
 
-          <!-- Card 3: Hakata Issou -->
-          <div class="ramen-card">
+          <!-- レンタカー（借りる） -->
+          <div class="info-card">
             <div class="masking-tape"></div>
-            <span class="ramen-name">博多一双</span>
-            <div class="ramen-photo">
-              <img src="images/ramen_issou.jpg" alt="博多一双">
+            <div class="info-card-title">
+              <span class="emoji">🚗</span>
+              レンタカー（借りる）
             </div>
-            <p class="ramen-comment">泡系豚骨！<br>濃厚クリーミー</p>
-            <a href="http://www.hakata-issou.com/" target="_blank" class="ramen-link">サイトへ 🔗</a>
+            <p class="info-address">トヨタレンタカー博多駅前店</p>
+            <div class="info-row">
+              <div class="info-tel">
+                <a href="https://rent.toyota.co.jp/sp/shop/detail.aspx?rCode=68101&eCode=012" target="_blank">店舗詳細
+                  🔗</a>
+              </div>
+              <a href="https://goo.gl/maps/search/Toyota_Rent_a_Car_Hakata_Ekimae" target="_blank" class="info-btn">📍
+                Mapsで見る</a>
+            </div>
           </div>
 
-          <!-- Card 4: Hakata Daruma (New) -->
-          <div class="ramen-card">
+          <!-- レンタカー（返す） -->
+          <div class="info-card">
             <div class="masking-tape"></div>
-            <span class="ramen-name">博多だるま総本店</span>
-            <div class="ramen-photo">
-              <img src="images/ramen_daruma.jpg" alt="博多だるま">
+            <div class="info-card-title">
+              <span class="emoji">🚗</span>
+              レンタカー（返す）
             </div>
-            <p class="ramen-comment">有名人も来店！<br>総本店へGO</p>
-            <a href="https://www.instagram.com/hakata_daruma_honten?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-              target="_blank" class="ramen-link">Insta 🔗</a>
+            <p class="info-address">トヨタレンタカー福岡空港店</p>
+            <div class="info-row">
+              <div class="info-tel">
+                <a href="https://rent.toyota.co.jp/sp/shop/detail.aspx?rCode=68101&eCode=013" target="_blank">店舗詳細
+                  🔗</a>
+              </div>
+              <a href="https://goo.gl/maps/search/Toyota_Rent_a_Car_Fukuoka_Airport" target="_blank" class="info-btn">📍
+                Mapsで見る</a>
+            </div>
           </div>
 
-          <!-- Card 5: Hacchan Ramen (New) -->
-          <div class="ramen-card">
-            <div class="masking-tape"></div>
-            <span class="ramen-name">八ちゃんラーメン</span>
-            <div class="ramen-photo">
-              <img src="images/ramen_hacchan.jpg" alt="八ちゃんラーメン">
-            </div>
-            <p class="ramen-comment">激ウマ！！<br>濃厚豚骨ラーメン</p>
-            <a href="https://www.instagram.com/yakuin.hacchan?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-              target="_blank" class="ramen-link">Insta 🔗</a>
+          <!-- ========== 自由時間おすすめスポット ========== -->
+          <div class="section-header" style="margin-top: 40px; transform: rotate(1deg); margin-bottom: 20px;">
+            <span class="section-icon-emoji">🗺️</span>
+            <h2 class="section-title">自由時間おすすめスポット</h2>
           </div>
 
+          <div class="spots-container">
+            <!-- Day 2 Drive -->
+            <div class="spot-category-header">
+              🚗 <span class="highlight-pink">Day 2 ドライブスポット</span>
+            </div>
+
+            <!-- Toto Ichiba -->
+            <div class="spot-card drive-style">
+              <div class="spot-content">
+                <div class="spot-title">🐟 とと市場（鮮魚専門店）</div>
+                <div class="spot-address">📍 北九州市八幡東区 ジアウトレット北九州</div>
+                <div class="spot-buttons">
+                  <a href="https://vt.tiktok.com/ZSaXDmy9Q/" target="_blank" class="btn-tiktok">▶ TikTok</a>
+                  <a href="https://maps.app.goo.gl/dummy" target="_blank" class="btn-map">📍 Map</a>
+                </div>
+              </div>
+              <div class="spot-photo-space"></div>
+            </div>
+
+            <!-- Nata Coast -->
+            <div class="spot-card drive-style">
+              <div class="spot-content">
+                <div class="spot-title">🏖️ 奈多海岸</div>
+                <div class="spot-address">📍 福岡市東区三苫</div>
+                <div class="spot-buttons">
+                  <a href="https://vt.tiktok.com/ZSaXD4ygM/" target="_blank" class="btn-tiktok">▶ TikTok</a>
+                  <a href="https://maps.app.goo.gl/dummy" target="_blank" class="btn-map">📍 Map</a>
+                </div>
+              </div>
+              <div class="spot-photo-space"></div>
+            </div>
+
+            <!-- Day 3 Activity -->
+            <div class="spot-category-header" style="margin-top: 30px;">
+              🎨 <span class="highlight-pink">Day 3 体験アクティビティ</span>
+            </div>
+
+            <!-- Segway -->
+            <div class="spot-card activity-style">
+              <div class="spot-content">
+                <div class="spot-title">🛴 セグウェイ散歩</div>
+                <div class="spot-address">📍 福岡エリア</div>
+                <div class="spot-buttons">
+                  <a href="https://activityjapan.com/publish/plan/26717" target="_blank" class="btn-reserve">📝 予約する</a>
+                </div>
+              </div>
+              <span class="reservation-note">※要予約</span>
+              <div class="spot-photo-space"></div>
+            </div>
+
+            <!-- Pottery -->
+            <div class="spot-card activity-style">
+              <div class="spot-content">
+                <div class="spot-title">🏺 陶芸体験（こもん堂）</div>
+                <div class="spot-address">📍 福岡市</div>
+                <div class="spot-buttons">
+                  <a href="https://share.google/vYoW1izMEMTT74UOA" target="_blank" class="btn-reserve">📝 予約する</a>
+                </div>
+              </div>
+              <span class="reservation-note">※要予約</span>
+              <div class="spot-photo-space"></div>
+            </div>
+
+            <!-- Kumihimo -->
+            <div class="spot-card activity-style">
+              <div class="spot-content">
+                <div class="spot-title">🎀 組紐体験</div>
+                <div class="spot-address">📍 福岡エリア</div>
+                <div class="spot-buttons">
+                  <a href="https://www.jalan.net/kankou/spt_guide000000186510/" target="_blank" class="btn-reserve">📝
+                    予約する</a>
+                </div>
+              </div>
+              <span class="reservation-note">※要予約</span>
+              <div class="spot-photo-space"></div>
+            </div>
+
+          </div>
+
+
+          <!-- ラーメン -->
+          <div class="section-header" style="margin-top: 30px; transform: rotate(1deg); margin-bottom: 20px;">
+            <img src="images/info.png" alt="" class="section-icon">
+            <h2 class="section-title">おすすめ博多ラーメン</h2>
+          </div>
+
+          <div class="ramen-overview">
+            <!-- Card 1: Ganso Nagahamaya (Recommended) -->
+            <div class="ramen-card">
+              <div class="masking-tape"></div>
+              <div class="recommend-badge">田村さん<br>オススメ!</div>
+              <span class="ramen-name">元祖長浜屋</span>
+              <div class="ramen-photo">
+                <img src="images/ramen_ganso.jpg" alt="元祖長浜屋">
+              </div>
+              <p class="ramen-comment">朝ラーおすすめ！<br>あっさり豚骨</p>
+              <a href="http://www.ganso-nagahamaya.co.jp/" target="_blank" class="ramen-link">サイトへ 🔗</a>
+            </div>
+
+            <!-- Card 2: ShinShin -->
+            <div class="ramen-card">
+              <div class="masking-tape"></div>
+              <span class="ramen-name">ShinShin</span>
+              <div class="ramen-photo">
+                <img src="images/ramen_shinshin.png" alt="ShinShin">
+              </div>
+              <p class="ramen-comment">行列必至！<br>博多の超有名店</p>
+              <a href="https://www.hakata-shinshin.com/" target="_blank" class="ramen-link">サイトへ 🔗</a>
+            </div>
+
+            <!-- Card 3: Hakata Issou -->
+            <div class="ramen-card">
+              <div class="masking-tape"></div>
+              <span class="ramen-name">博多一双</span>
+              <div class="ramen-photo">
+                <img src="images/ramen_issou.jpg" alt="博多一双">
+              </div>
+              <p class="ramen-comment">泡系豚骨！<br>濃厚クリーミー</p>
+              <a href="http://www.hakata-issou.com/" target="_blank" class="ramen-link">サイトへ 🔗</a>
+            </div>
+
+            <!-- Card 4: Hakata Daruma (New) -->
+            <div class="ramen-card">
+              <div class="masking-tape"></div>
+              <span class="ramen-name">博多だるま総本店</span>
+              <div class="ramen-photo">
+                <img src="images/ramen_daruma.jpg" alt="博多だるま">
+              </div>
+              <p class="ramen-comment">有名人も来店！<br>総本店へGO</p>
+              <a href="https://www.instagram.com/hakata_daruma_honten?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                target="_blank" class="ramen-link">Insta 🔗</a>
+            </div>
+
+            <!-- Card 5: Hacchan Ramen (New) -->
+            <div class="ramen-card">
+              <div class="masking-tape"></div>
+              <span class="ramen-name">八ちゃんラーメン</span>
+              <div class="ramen-photo">
+                <img src="images/ramen_hacchan.jpg" alt="八ちゃんラーメン">
+              </div>
+              <p class="ramen-comment">激ウマ！！<br>濃厚豚骨ラーメン</p>
+              <a href="https://www.instagram.com/yakuin.hacchan?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                target="_blank" class="ramen-link">Insta 🔗</a>
+            </div>
+
+          </div>
         </div>
       </div>
     </section>
