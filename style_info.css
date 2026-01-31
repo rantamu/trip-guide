@@ -302,6 +302,11 @@
     font-weight: 800;
     line-height: 1.2;
     transform: rotate(15deg);
-    z-index: 10;
+    z-index: 20;
+    /* Ensure it is above the tape */
     padding-bottom: 12px;
+}
+
+.ramen-card .masking-tape {
+    z-index: 10;
 }
