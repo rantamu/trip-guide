@@ -151,24 +151,28 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-    // Info Accordion
-    const infoToggleBtn = document.getElementById('info-toggle-btn');
-    const infoBody = document.getElementById('info-body');
+    // Info Accordion (Multiple)
+    const accordionBtns = document.querySelectorAll('.menu-accordion-btn');
 
-    if (infoToggleBtn && infoBody) {
-        infoToggleBtn.addEventListener('click', () => {
-            const isOpen = infoBody.classList.contains('open');
-            if (isOpen) {
-                // Close
-                infoBody.classList.remove('open');
-                infoBody.style.maxHeight = null;
-                infoToggleBtn.innerHTML = '<span class="icon">📂</span> タップして情報をひらく';
-            } else {
-                // Open
-                infoBody.classList.add('open');
-                infoBody.style.maxHeight = infoBody.scrollHeight + "px";
-                infoToggleBtn.innerHTML = '<span class="icon">📂</span> 情報をとじる';
+    accordionBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Toggle active state on button
+            btn.classList.toggle('active');
+
+            // Find the associated body (next sibling)
+            const body = btn.nextElementSibling;
+
+            if (body && body.classList.contains('menu-accordion-body')) {
+                if (body.classList.contains('open')) {
+                    // Close
+                    body.classList.remove('open');
+                    body.style.maxHeight = null;
+                } else {
+                    // Open
+                    body.classList.add('open');
+                    body.style.maxHeight = body.scrollHeight + "px";
+                }
             }
         });
-    }
+    });
 });

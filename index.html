@@ -619,11 +619,9 @@
         <h2 class="section-title">お役立ち情報</h2>
       </div>
 
-      <button id="info-toggle-btn" class="info-toggle-btn">
-        <span class="icon">📂</span> タップして情報をひらく
-      </button>
-
-      <div id="info-body" class="info-body">
+      <!-- Accordion 1: Hotel & Rental -->
+      <button class="menu-accordion-btn">🏨 ホテル・レンタカー</button>
+      <div class="menu-accordion-body">
         <div class="info-section">
           <!-- ホテル1 -->
           <div class="info-card">
@@ -699,17 +697,17 @@
                 Mapsで見る</a>
             </div>
           </div>
+        </div>
+      </div>
 
-          <!-- ========== 自由時間おすすめスポット ========== -->
-          <div class="section-header" style="margin-top: 40px; transform: rotate(1deg); margin-bottom: 20px;">
-            <span class="section-icon-emoji">🗺️</span>
-            <h2 class="section-title">自由時間おすすめスポット</h2>
-          </div>
-
+      <!-- Accordion 2: Free Time Spots -->
+      <button class="menu-accordion-btn">🗺️ 自由時間おすすめスポット</button>
+      <div class="menu-accordion-body">
+        <div class="info-section">
           <div class="spots-container">
-            <!-- Day 2 Drive -->
+            <!-- Drive -->
             <div class="spot-category-header">
-              🚗 <span class="highlight-pink">Day 2 ドライブスポット</span>
+              🚗 <span class="highlight-pink">ドライブスポット</span>
             </div>
 
             <!-- Toto Ichiba -->
@@ -738,9 +736,9 @@
               <div class="spot-photo-space"></div>
             </div>
 
-            <!-- Day 3 Activity -->
+            <!-- Activities -->
             <div class="spot-category-header" style="margin-top: 30px;">
-              🎨 <span class="highlight-pink">Day 3 体験アクティビティ</span>
+              🎨 <span class="highlight-pink">体験アクティビティ</span>
             </div>
 
             <!-- Segway -->
@@ -782,75 +780,70 @@
               <span class="reservation-note">※要予約</span>
               <div class="spot-photo-space"></div>
             </div>
+          </div>
+        </div>
+      </div>
 
+      <!-- Accordion 3: Ramen -->
+      <button class="menu-accordion-btn">🍜 おすすめ博多ラーメン</button>
+      <div class="menu-accordion-body">
+        <div class="ramen-overview">
+          <!-- Card 1: Ganso Nagahamaya (Recommended) -->
+          <div class="ramen-card">
+            <div class="masking-tape"></div>
+            <div class="recommend-badge">田村さん<br>オススメ!</div>
+            <span class="ramen-name">元祖長浜屋</span>
+            <div class="ramen-photo">
+              <img src="images/ramen_ganso.jpg" alt="元祖長浜屋">
+            </div>
+            <p class="ramen-comment">朝ラーおすすめ！<br>あっさり豚骨</p>
+            <a href="http://www.ganso-nagahamaya.co.jp/" target="_blank" class="ramen-link">サイトへ 🔗</a>
           </div>
 
-
-          <!-- ラーメン -->
-          <div class="section-header" style="margin-top: 30px; transform: rotate(1deg); margin-bottom: 20px;">
-            <img src="images/info.png" alt="" class="section-icon">
-            <h2 class="section-title">おすすめ博多ラーメン</h2>
+          <!-- Card 2: ShinShin -->
+          <div class="ramen-card">
+            <div class="masking-tape"></div>
+            <span class="ramen-name">ShinShin</span>
+            <div class="ramen-photo">
+              <img src="images/ramen_shinshin.png" alt="ShinShin">
+            </div>
+            <p class="ramen-comment">行列必至！<br>博多の超有名店</p>
+            <a href="https://www.hakata-shinshin.com/" target="_blank" class="ramen-link">サイトへ 🔗</a>
           </div>
 
-          <div class="ramen-overview">
-            <!-- Card 1: Ganso Nagahamaya (Recommended) -->
-            <div class="ramen-card">
-              <div class="masking-tape"></div>
-              <div class="recommend-badge">田村さん<br>オススメ!</div>
-              <span class="ramen-name">元祖長浜屋</span>
-              <div class="ramen-photo">
-                <img src="images/ramen_ganso.jpg" alt="元祖長浜屋">
-              </div>
-              <p class="ramen-comment">朝ラーおすすめ！<br>あっさり豚骨</p>
-              <a href="http://www.ganso-nagahamaya.co.jp/" target="_blank" class="ramen-link">サイトへ 🔗</a>
+          <!-- Card 3: Hakata Issou -->
+          <div class="ramen-card">
+            <div class="masking-tape"></div>
+            <span class="ramen-name">博多一双</span>
+            <div class="ramen-photo">
+              <img src="images/ramen_issou.jpg" alt="博多一双">
             </div>
+            <p class="ramen-comment">泡系豚骨！<br>濃厚クリーミー</p>
+            <a href="http://www.hakata-issou.com/" target="_blank" class="ramen-link">サイトへ 🔗</a>
+          </div>
 
-            <!-- Card 2: ShinShin -->
-            <div class="ramen-card">
-              <div class="masking-tape"></div>
-              <span class="ramen-name">ShinShin</span>
-              <div class="ramen-photo">
-                <img src="images/ramen_shinshin.png" alt="ShinShin">
-              </div>
-              <p class="ramen-comment">行列必至！<br>博多の超有名店</p>
-              <a href="https://www.hakata-shinshin.com/" target="_blank" class="ramen-link">サイトへ 🔗</a>
+          <!-- Card 4: Hakata Daruma (New) -->
+          <div class="ramen-card">
+            <div class="masking-tape"></div>
+            <span class="ramen-name">博多だるま総本店</span>
+            <div class="ramen-photo">
+              <img src="images/ramen_daruma.jpg" alt="博多だるま">
             </div>
+            <p class="ramen-comment">有名人も来店！<br>総本店へGO</p>
+            <a href="https://www.instagram.com/hakata_daruma_honten?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+              target="_blank" class="ramen-link">Insta 🔗</a>
+          </div>
 
-            <!-- Card 3: Hakata Issou -->
-            <div class="ramen-card">
-              <div class="masking-tape"></div>
-              <span class="ramen-name">博多一双</span>
-              <div class="ramen-photo">
-                <img src="images/ramen_issou.jpg" alt="博多一双">
-              </div>
-              <p class="ramen-comment">泡系豚骨！<br>濃厚クリーミー</p>
-              <a href="http://www.hakata-issou.com/" target="_blank" class="ramen-link">サイトへ 🔗</a>
+          <!-- Card 5: Hacchan Ramen (New) -->
+          <div class="ramen-card">
+            <div class="masking-tape"></div>
+            <span class="ramen-name">八ちゃんラーメン</span>
+            <div class="ramen-photo">
+              <img src="images/ramen_hacchan.jpg" alt="八ちゃんラーメン">
             </div>
-
-            <!-- Card 4: Hakata Daruma (New) -->
-            <div class="ramen-card">
-              <div class="masking-tape"></div>
-              <span class="ramen-name">博多だるま総本店</span>
-              <div class="ramen-photo">
-                <img src="images/ramen_daruma.jpg" alt="博多だるま">
-              </div>
-              <p class="ramen-comment">有名人も来店！<br>総本店へGO</p>
-              <a href="https://www.instagram.com/hakata_daruma_honten?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                target="_blank" class="ramen-link">Insta 🔗</a>
-            </div>
-
-            <!-- Card 5: Hacchan Ramen (New) -->
-            <div class="ramen-card">
-              <div class="masking-tape"></div>
-              <span class="ramen-name">八ちゃんラーメン</span>
-              <div class="ramen-photo">
-                <img src="images/ramen_hacchan.jpg" alt="八ちゃんラーメン">
-              </div>
-              <p class="ramen-comment">激ウマ！！<br>濃厚豚骨ラーメン</p>
-              <a href="https://www.instagram.com/yakuin.hacchan?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                target="_blank" class="ramen-link">Insta 🔗</a>
-            </div>
-
+            <p class="ramen-comment">激ウマ！！<br>濃厚豚骨ラーメン</p>
+            <a href="https://www.instagram.com/yakuin.hacchan?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+              target="_blank" class="ramen-link">Insta 🔗</a>
           </div>
         </div>
       </div>

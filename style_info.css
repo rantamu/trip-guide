@@ -312,7 +312,7 @@
 }
 
 /* ========== Info Accordion ========== */
-.info-toggle-btn {
+.menu-accordion-btn {
     display: block;
     width: 90%;
     margin: 10px auto 20px;
@@ -327,15 +327,38 @@
     box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
     transition: all 0.2s;
     font-family: var(--font-heading);
-    text-align: center;
+    text-align: left;
+    /* Changed to left for menu style */
+    padding-left: 20px;
+    position: relative;
+    /* Prevent text selection */
+    user-select: none;
+    -webkit-user-select: none;
 }
 
-.info-toggle-btn:active {
+.menu-accordion-btn::after {
+    content: '▼';
+    position: absolute;
+    right: 20px;
+    font-size: 0.8rem;
+    transition: transform 0.3s;
+}
+
+.menu-accordion-btn.active::after {
+    transform: rotate(180deg);
+}
+
+.menu-accordion-btn:active {
     box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
     transform: translate(2px, 2px);
 }
 
-.info-body {
+.menu-accordion-btn.active {
+    background: var(--primary-color);
+    color: white;
+}
+
+.menu-accordion-body {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.4s ease-out;
@@ -343,9 +366,8 @@
     transition: max-height 0.4s ease-out, opacity 0.3s ease-out;
 }
 
-.info-body.open {
+.menu-accordion-body.open {
     opacity: 1;
-    /* max-height is set via JS */
 }
 
 /* ========== Free Time Spots ========== */
