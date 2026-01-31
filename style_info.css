@@ -215,13 +215,7 @@
     display: block;
 }
 
-.ramen-photo::after {
-    content: '🍜';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
+/* .ramen-photo::after removed */
 
 /* 一言コメント */
 .ramen-comment {
@@ -298,7 +292,7 @@
     font-weight: bold;
     line-height: 1.2;
     transform: rotate(15deg);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border: 2px solid white;
     z-index: 10;
 }
