@@ -334,6 +334,13 @@
     /* Prevent text selection */
     user-select: none;
     -webkit-user-select: none;
+    outline: none;
+    /* Remove blue focus border */
+    -webkit-tap-highlight-color: transparent;
+}
+
+.menu-accordion-btn:focus {
+    outline: none;
 }
 
 .menu-accordion-btn::after {
