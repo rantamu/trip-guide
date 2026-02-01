@@ -399,6 +399,9 @@
     justify-content: space-between;
     position: relative;
     overflow: hidden;
+    height: 140px;
+    min-height: 140px;
+    padding: 0;
 }
 
 .spot-card.drive-style {
