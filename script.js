@@ -194,10 +194,10 @@ window.openFreeTimeSpots = function () {
             void btn.offsetWidth; // Trigger reflow
             btn.classList.add('highlight-anim');
 
-            // Remove class after animation (0.5s * 3 = 1500ms)
+            // Remove class after animation (0.8s * 2 = 1600ms)
             setTimeout(() => {
                 btn.classList.remove('highlight-anim');
-            }, 1600);
+            }, 1800);
         }, 600); // 600ms delay for scroll
     }
 };

@@ -542,12 +542,12 @@
     }
 
     50% {
-        transform: scale(1.15);
-        /* Increased scale */
-        box-shadow: 0 0 25px rgba(255, 71, 87, 0.8);
-        /* Stronger shadow */
-        background-color: #ffdde1;
-        /* More visible pink */
+        transform: scale(1.03);
+        /* Subtle scale */
+        box-shadow: 0 0 10px rgba(255, 71, 87, 0.4);
+        /* Softer shadow */
+        background-color: #fff5f7;
+        /* Very pale pink */
         border-color: #ff4757;
     }
 
@@ -559,9 +559,8 @@
 }
 
 .menu-accordion-btn.highlight-anim {
-    animation: highlight-pulse 0.5s ease-in-out 3;
-    /* Run 3 times, slightly slower */
+    animation: highlight-pulse 0.8s ease-in-out 2;
+    /* Slower, 2 pulses */
     position: relative;
     z-index: 10;
-    /* Ensure on top */
 }
