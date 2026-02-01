@@ -532,3 +532,36 @@
     border-radius: 4px;
     z-index: 3;
 }
+
+/* Highlight Animation for Anchor Link */
+@keyframes highlight-pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+        background-color: white;
+    }
+
+    50% {
+        transform: scale(1.15);
+        /* Increased scale */
+        box-shadow: 0 0 25px rgba(255, 71, 87, 0.8);
+        /* Stronger shadow */
+        background-color: #ffdde1;
+        /* More visible pink */
+        border-color: #ff4757;
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+        background-color: white;
+    }
+}
+
+.menu-accordion-btn.highlight-anim {
+    animation: highlight-pulse 0.5s ease-in-out 3;
+    /* Run 3 times, slightly slower */
+    position: relative;
+    z-index: 10;
+    /* Ensure on top */
+}

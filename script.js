@@ -176,3 +176,30 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// Create a global function to open the Free Time Spots accordion
+window.openFreeTimeSpots = function () {
+    const btn = document.getElementById('free-time-spots-btn');
+    if (btn) {
+        // If it's not active (closed), click it to open
+        if (!btn.classList.contains('active')) {
+            btn.click();
+        }
+        // If it is already active, just add the animation
+
+        // Wait for smooth scroll to finish (approx 600ms) before animating
+        setTimeout(() => {
+            // Trigger animation
+            btn.classList.remove('highlight-anim');
+            void btn.offsetWidth; // Trigger reflow
+            btn.classList.add('highlight-anim');
+
+            // Remove class after animation (0.5s * 3 = 1500ms)
+            setTimeout(() => {
+                btn.classList.remove('highlight-anim');
+            }, 1600);
+        }, 600); // 600ms delay for scroll
+    }
+};
+    }
+};
