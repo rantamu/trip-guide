@@ -201,5 +201,4 @@ window.openFreeTimeSpots = function () {
         }, 600); // 600ms delay for scroll
     }
 };
-    }
-};
+
