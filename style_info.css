@@ -546,6 +546,8 @@
         transform: scale(1);
         box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
         background-color: white;
+        color: #ff4757;
+        /* Ensure text is visible on white */
     }
 
     50% {
@@ -556,12 +558,16 @@
         background-color: #fff5f7;
         /* Very pale pink */
         border-color: #ff4757;
+        color: #ff4757;
+        /* Ensure text is visible on pale pink */
     }
 
     100% {
         transform: scale(1);
         box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
         background-color: white;
+        color: #ff4757;
+        /* Ensure text is visible on white */
     }
 }
 
