@@ -571,3 +571,71 @@
     position: relative;
     z-index: 10;
 }
+
+/* Notebook Section Box Base */
+.notebook-section-box {
+    background: linear-gradient(to right, #fff 0%, #fff 25px, var(--notebook-bg) 25px, var(--notebook-bg) 27px, #fff 27px);
+    border-radius: 0 16px 16px 0;
+    padding: 20px 15px 20px 35px;
+    /* Adjusted padding */
+    margin-bottom: 25px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    border-left: 5px solid var(--notebook-color);
+}
+
+/* Ring Binder Holes */
+.notebook-section-box::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 7px;
+    width: 12px;
+    height: 12px;
+    background: var(--notebook-color);
+    border-radius: 50%;
+    /* Pattern of holes */
+    box-shadow:
+        0 25px 0 var(--notebook-color),
+        0 50px 0 var(--notebook-color),
+        0 75px 0 var(--notebook-color),
+        0 100px 0 var(--notebook-color),
+        0 125px 0 var(--notebook-color),
+        0 150px 0 var(--notebook-color),
+        0 175px 0 var(--notebook-color),
+        0 200px 0 var(--notebook-color),
+        0 225px 0 var(--notebook-color),
+        0 250px 0 var(--notebook-color),
+        0 275px 0 var(--notebook-color),
+        0 300px 0 var(--notebook-color),
+        0 325px 0 var(--notebook-color),
+        0 350px 0 var(--notebook-color),
+        0 375px 0 var(--notebook-color),
+        0 400px 0 var(--notebook-color);
+}
+
+/* Color Variants */
+.notebook-box-pink {
+    --notebook-color: #ff5299;
+    --notebook-bg: #ffe4ec;
+    box-shadow: 3px 3px 10px rgba(255, 82, 153, 0.15);
+}
+
+.notebook-box-green {
+    --notebook-color: #4CAF50;
+    --notebook-bg: #c8e6c9;
+    box-shadow: 3px 3px 10px rgba(76, 175, 80, 0.15);
+}
+
+.notebook-box-blue {
+    --notebook-color: #3498DB;
+    --notebook-bg: #EAF2F8;
+    box-shadow: 3px 3px 10px rgba(52, 152, 219, 0.15);
+}
+
+/* Adjust card margin inside notebook */
+.notebook-section-box .info-card,
+.notebook-section-box .spot-card {
+    width: 100%;
+    box-sizing: border-box;
+}
