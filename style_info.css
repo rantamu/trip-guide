@@ -502,6 +502,8 @@
     align-items: center;
     box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
     margin-top: 5px;
+    width: fit-content;
+    /* Prevent full width */
     transition: transform 0.2s;
 }
 
