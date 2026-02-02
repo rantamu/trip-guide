@@ -511,6 +511,27 @@
     transform: scale(0.95);
 }
 
+.btn-discount {
+    background: #FF6B6B;
+    /* Pastel Red */
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: bold;
+    padding: 6px 16px;
+    border-radius: 20px;
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+    margin-top: 5px;
+    width: fit-content;
+    transition: transform 0.2s;
+}
+
+.btn-discount:active {
+    transform: scale(0.95);
+}
+
 .spot-photo-space {
     width: 40%;
     min-width: 100px;
