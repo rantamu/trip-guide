@@ -911,6 +911,33 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    // Secret Ramen Logic
+    let ramenTapCount = 0;
+    const secretRamen = document.getElementById('secret-ramen');
+    if (secretRamen) {
+      // Add transition for smooth scaling
+      secretRamen.style.transition = "transform 0.1s ease-out";
+      secretRamen.style.display = "inline-block"; // transform requires block/inline-block
+
+      secretRamen.addEventListener('click', () => {
+        ramenTapCount++;
+
+        // Grow the ramen! (starts at 1.0, +0.2 per click)
+        const newScale = 1.0 + (ramenTapCount * 0.2);
+        secretRamen.style.transform = `scale(${newScale})`;
+
+        if (ramenTapCount === 10) {
+          // Reset style briefly before redirect or just redirect
+          window.location.href = "https://www.google.com/maps/d/edit?mid=1Ad62xckJ-_a6I376VIxV0NRWOPSj_kU&usp=sharing";
+          ramenTapCount = 0;
+          setTimeout(() => {
+            secretRamen.style.transform = "scale(1)";
+          }, 500);
+        }
+      });
+    }
+  </script>
 </body>
 
 </html>
