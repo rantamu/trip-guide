@@ -929,7 +929,7 @@
 
         if (ramenTapCount === 10) {
           // Reset style briefly before redirect or just redirect
-          window.location.href = "https://www.google.com/maps/d/edit?mid=1Ad62xckJ-_a6I376VIxV0NRWOPSj_kU&usp=sharing";
+          window.open("https://www.google.com/maps/d/edit?mid=1Ad62xckJ-_a6I376VIxV0NRWOPSj_kU&usp=sharing", "_blank");
           ramenTapCount = 0;
           setTimeout(() => {
             secretRamen.style.transform = "scale(1)";
